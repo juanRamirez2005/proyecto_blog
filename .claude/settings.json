@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($d = \"C:\\\\Users\\\\User\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-User-OneDrive-Documentos-tarea-de-mi-novia-blog\\\\8190e836-3128-46cf-bf2e-7ba33d463c7d\\\\scratchpad\\\\doc\"; New-Item -ItemType Directory -Force $d | Out-Null; Copy-Item \"C:\\\\Users\\\\User\\\\Downloads\\\\Informe_tradicion_semiotica \\(1\\).docx\" \"$d\\\\informe.docx\"; Get-ChildItem $d; Get-ChildItem \"c:\\\\Users\\\\User\\\\OneDrive\\\\Documentos\\\\tarea de mi novia\\\\blog\"; \\(Get-Command python -ErrorAction SilentlyContinue\\).Source; \\(Get-Command pandoc -ErrorAction SilentlyContinue\\).Source)",
+      "Bash(python -)",
+      "Bash(node --check js/main.js)",
+      "Read(//c/Users/User/AppData/Local/Temp/claude/c--Users-User-OneDrive-Documentos-tarea-de-mi-novia-blog/8190e836-3128-46cf-bf2e-7ba33d463c7d/scratchpad/**)",
+      "WebFetch(domain:revistas.usp.br)",
+      "WebFetch(domain:www.dove.com)"
+    ]
+  }
+}

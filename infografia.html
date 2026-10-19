@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Infografía · Tradición semiótica</title>
+<meta name="description" content="Infografía vertical 1080×1920: la tradición semiótica, el significado detrás de los signos.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230E0E0E'/%3E%3Ccircle cx='22' cy='22' r='5' fill='%23D7182A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#D7182A; --red-ink:#B3121F; --red-bright:#FF3B4E;
+  --black:#0E0E0E; --ink:#1A1A1A; --graphite:#4A4A4A;
+  --line:#E4E1DC; --paper:#FAF8F5; --white:#FFFFFF;
+  --stage:#D9D6D1;
+  --pad:64px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--stage);color:var(--ink)}
+body{font-family:Inter,system-ui,sans-serif;min-height:100vh;overflow-x:hidden}
+svg{display:block}
+
+/* ---------- Barra exterior ---------- */
+.toolbar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;
+  max-width:1080px;margin:0 auto;padding:14px 16px;font:600 14px/1 Inter,sans-serif}
+.toolbar a,.toolbar button{color:var(--black);text-decoration:none;font:inherit;cursor:pointer;
+  border:2px solid var(--black);background:transparent;padding:10px 14px}
+.toolbar a:hover,.toolbar button:hover{background:var(--black);color:var(--white)}
+.toolbar button{background:var(--red);border-color:var(--red);color:var(--white)}
+.toolbar button:hover{background:var(--black);border-color:var(--black)}
+.toolbar :focus-visible{outline:2px solid var(--red);outline-offset:3px}
+
+.stage{display:flex;justify-content:center;padding:0 0 32px}
+.stage__frame{width:1080px;height:1920px;flex:none;position:relative}
+
+/* ---------- Póster ---------- */
+.poster{width:1080px;height:1920px;background:var(--paper);position:absolute;top:0;left:0;
+  transform-origin:top left;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.18);
+  display:flex;flex-direction:column}
+.mont{font-family:Montserrat,sans-serif}
+.kicker{font:700 15px/1 Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase}
+.red{color:var(--red)}
+.num{font:900 15px/1 Montserrat,sans-serif;color:var(--red);letter-spacing:.1em}
+
+/* Cabecera */
+.hd{position:relative;padding:42px var(--pad) 30px;flex:none}
+.hd__bar{display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid var(--black);padding-bottom:16px}
+.hd__title{margin-top:28px;font:900 100px/.9 Montserrat,sans-serif;letter-spacing:-.045em;color:var(--black);text-transform:uppercase;position:relative;z-index:2}
+.hd__sub{margin-top:20px;font:800 38px/1.05 Montserrat,sans-serif;letter-spacing:-.02em;color:var(--black);max-width:none;position:relative;z-index:2}
+.hd__sub em{font-style:normal;color:var(--red)}
+.hd__deco{position:absolute;right:0;top:88px;z-index:1}
+
+/* Pregunta */
+.q{flex:none;background:var(--black);color:var(--white);height:112px;display:grid;
+  grid-template-columns:112px 1fr;align-items:center}
+.q__mark{height:100%;background:var(--red);display:grid;place-items:center;font:900 84px/1 Montserrat,sans-serif;color:var(--white)}
+.q__body{padding:0 56px 0 40px}
+.q__lbl{font:700 13px/1 Montserrat,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--red-bright);margin-bottom:12px}
+.q__txt{font:700 28px/1.18 Montserrat,sans-serif;letter-spacing:-.01em}
+
+/* Secciones */
+.sec{flex:none;padding:0 var(--pad)}
+.sec__hd{display:flex;align-items:baseline;gap:14px;border-top:2px solid var(--black);padding-top:12px;margin-bottom:16px}
+.sec__hd h2{font:800 22px/1 Montserrat,sans-serif;text-transform:uppercase;letter-spacing:.04em;color:var(--black)}
+.sec__hd span.note{margin-left:auto;font:500 15px/1 Inter,sans-serif;color:var(--graphite)}
+
+/* Signos */
+.signs{margin-top:22px}
+.signs__row{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.sign{display:flex;align-items:center;gap:16px}
+.sign__ic{width:66px;height:66px;flex:none;border:3px solid var(--black);display:grid;place-items:center;background:var(--white)}
+.sign b{display:block;font:800 21px/1.1 Montserrat,sans-serif;color:var(--black)}
+.sign small{display:block;font:400 15px/1.3 Inter,sans-serif;color:var(--graphite);margin-top:4px}
+
+/* Conceptos */
+.concepts{margin-top:20px}
+.concepts__grid{display:grid;grid-template-columns:400px 1fr;gap:36px}
+.saus{position:relative;border:3px solid var(--black);background:var(--white);padding:14px 18px}
+.saus__cap{font:500 14px/1.35 Inter,sans-serif;color:var(--graphite)}
+.ladder{display:flex;flex-direction:column;gap:12px}
+.step{display:grid;grid-template-columns:44px 1fr;align-items:stretch;min-height:72px}
+.step__n{font:900 15px/1 Montserrat,sans-serif;display:grid;place-items:center;color:var(--white);background:var(--black)}
+.step__b{padding:10px 20px;border:3px solid var(--black);border-left:0;display:flex;flex-direction:column;justify-content:center;background:var(--white)}
+.step__b b{font:800 22px/1 Montserrat,sans-serif;text-transform:uppercase;letter-spacing:.02em;color:var(--black)}
+.step__b span{font:400 16px/1.35 Inter,sans-serif;color:var(--graphite);margin-top:6px}
+.step__b span strong{color:var(--ink);font-weight:600}
+.step--2 .step__n{background:var(--red)}
+.step--2 .step__b{border-color:var(--red)}
+.step--2 .step__b b{color:var(--red-ink)}
+.step--3 .step__b{background:var(--black)}
+.step--3 .step__n{background:var(--black);border-right:1px solid #333}
+.step--3 .step__b b{color:var(--white)}
+.step--3 .step__b span{color:#CFCBC4}
+.step--3 .step__b span strong{color:var(--white)}
+
+/* Peirce */
+.peirce{margin-top:20px}
+.peirce__grid{display:grid;grid-template-columns:260px repeat(3,1fr);gap:20px;align-items:stretch}
+.ptype{border-top:6px solid var(--black);padding-top:10px;display:flex;flex-direction:column}
+.ptype--hl{border-top-color:var(--red)}
+.ptype__ic{height:78px;display:flex;align-items:center}
+.ptype b{font:800 26px/1 Montserrat,sans-serif;color:var(--black);margin-top:8px}
+.ptype .rel{font:700 13px/1 Montserrat,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--red-ink);margin-top:8px}
+.ptype p{font:400 16px/1.35 Inter,sans-serif;color:var(--graphite);margin-top:8px}
+
+/* Dove */
+.dove{flex:none;margin-top:24px;background:var(--black);color:var(--white);display:grid;grid-template-columns:420px 1fr;position:relative}
+.dove__art{position:relative;padding:24px 0 20px var(--pad)}
+.dove__txt{padding:26px var(--pad) 20px 8px}
+.dove__lbl{display:flex;gap:12px;align-items:center;font:700 13px/1 Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--red-bright)}
+.dove__lbl i{font-style:normal;color:#9A958E;letter-spacing:.12em}
+.dove h3{font:900 32px/1.02 Montserrat,sans-serif;letter-spacing:-.02em;margin-top:12px}
+.dove__pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}
+.dove__pair div{border-top:3px solid var(--white);padding-top:10px}
+.dove__pair div:last-child{border-top-color:var(--red-bright)}
+.dove__pair b{font:800 15px/1 Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.dove__pair div:last-child b{color:var(--red-bright)}
+.dove__pair p{font:400 16px/1.38 Inter,sans-serif;color:#DAD6CF;margin-top:8px}
+.dove__anchor{margin-top:16px;font:400 14px/1.35 Inter,sans-serif;color:#A9A49C}
+.dove__anchor strong{color:var(--white);font-weight:600}
+
+/* Autores */
+.authors{margin-top:22px}
+.authors__row{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-left:2px solid var(--black)}
+.author{padding:0 16px;border-right:2px solid var(--black)}
+.author__top{display:flex;align-items:center;gap:10px}.author__i{font:900 40px/1 Montserrat,sans-serif;color:var(--black);letter-spacing:-.04em}
+.author:nth-child(3) .author__i{color:var(--red)}
+.author b{display:block;font:800 18px/1.1 Montserrat,sans-serif;color:var(--black)}
+.author small{display:block;font:500 13px/1 Inter,sans-serif;color:var(--graphite);margin-top:4px;letter-spacing:.02em}
+.author p{font:400 15px/1.32 Inter,sans-serif;color:var(--ink);margin-top:10px}
+
+/* Aplicaciones */
+.apps{margin-top:20px}
+.apps__row{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.app{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px}
+.app__ic{width:54px;height:54px;border-radius:50%;background:var(--black);display:grid;place-items:center}
+.app:first-child .app__ic{background:var(--red)}
+.app span{font:700 15px/1.15 Montserrat,sans-serif;color:var(--black);white-space:nowrap;letter-spacing:-.01em}
+
+/* Pie */
+.ft{margin-top:auto;flex:none;height:50px;background:var(--black);color:#CFCBC4;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);font:500 14px/1 Inter,sans-serif}
+.ft strong{color:var(--white);font-weight:600}
+.ft .dot{display:inline-block;width:10px;height:10px;background:var(--red);border-radius:50%;margin-right:10px;vertical-align:middle}
+
+/* Captura y print */
+.is-measure .poster{height:auto;overflow:visible}.is-measure .ft{margin-top:0}
+.is-capture .toolbar{display:none}
+.is-capture,.is-capture body{background:var(--paper)}
+.is-capture .stage{padding:0;display:block}
+.is-capture .poster{box-shadow:none}
+@page{size:1080px 1920px;margin:0}
+@media print{
+  html,body{background:var(--paper)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .toolbar{display:none!important}
+  .stage{padding:0!important;display:block}
+  .stage__frame{width:1080px!important;height:1920px!important}
+  .poster{transform:none!important;box-shadow:none}
+}
+</style>
+<script>if(/[?&]capture\b/.test(location.search))document.documentElement.classList.add('is-capture');if(/[?&]measure\b/.test(location.search))document.documentElement.classList.add('is-measure');</script>
+</head>
+<body>
+
+<nav class="toolbar" aria-label="Acciones">
+  <a href="index.html">&larr; Volver al blog</a>
+  <button type="button" onclick="window.print()">Imprimir / Guardar PDF</button>
+</nav>
+
+<div class="stage">
+<div class="stage__frame" id="frame">
+<main class="poster" id="poster" aria-label="Infografía: La tradición semiótica, el significado detrás de los signos">
+
+  <!-- ============ CABECERA ============ -->
+  <header class="hd">
+    <div class="hd__bar">
+      <span class="kicker">Teorías de la comunicación</span>
+      <span class="kicker red">Tradición semiótica</span>
+    </div>
+
+    <svg class="hd__deco" width="300" height="286" viewBox="0 0 420 400" aria-hidden="true">
+      <rect x="250" y="0" width="170" height="400" fill="#0E0E0E"/>
+      <circle cx="250" cy="215" r="128" fill="#D7182A"/>
+      <path d="M250 87 A128 128 0 0 1 250 343 Z" fill="#B3121F"/>
+      <line x1="80" y1="380" x2="420" y2="40" stroke="#0E0E0E" stroke-width="6"/>
+      <g fill="#FAF8F5"><circle cx="335" cy="320" r="9"/><circle cx="335" cy="350" r="9"/><circle cx="365" cy="320" r="9"/><circle cx="365" cy="350" r="9"/></g>
+    </svg>
+
+    <h1 class="hd__title">La tradición<br>semiótica</h1>
+    <p class="hd__sub">El significado detrás de los <em>signos.</em></p>
+  </header>
+
+  <!-- ============ PREGUNTA CENTRAL ============ -->
+  <section class="q" aria-label="Pregunta central">
+    <div class="q__mark" aria-hidden="true">?</div>
+    <div class="q__body">
+      <p class="q__lbl">Pregunta central</p>
+      <p class="q__txt">¿Cómo se produce y se interpreta el significado a través de los signos?</p>
+    </div>
+  </section>
+
+  <!-- ============ SIGNOS ============ -->
+  <section class="sec signs">
+    <div class="sec__hd"><span class="num">01</span><h2>Todo comunica: los signos</h2><span class="note">Algo que está en lugar de otra cosa</span></div>
+    <div class="signs__row">
+      <div class="sign">
+        <div class="sign__ic"><svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><text x="24" y="35" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="28" fill="#0E0E0E">Aa</text><rect x="2" y="42" width="44" height="4" fill="#D7182A"/></svg></div>
+        <div><b>Palabras</b><small>orales y escritas</small></div>
+      </div>
+      <div class="sign">
+        <div class="sign__ic"><svg width="50" height="44" viewBox="0 0 50 44" aria-hidden="true"><rect x="2" y="2" width="46" height="40" fill="none" stroke="#0E0E0E" stroke-width="3"/><circle cx="35" cy="13" r="5" fill="#D7182A"/><path d="M4 40 L18 20 L27 31 L33 25 L46 40 Z" fill="#0E0E0E"/></svg></div>
+        <div><b>Imágenes</b><small>fotos, ilustraciones</small></div>
+      </div>
+      <div class="sign">
+        <div class="sign__ic"><svg width="46" height="42" viewBox="0 0 46 42" aria-hidden="true"><path d="M23 40 C 6 27 1 19 1 12 A 11 11 0 0 1 23 7 A 11 11 0 0 1 45 12 C 45 19 40 27 23 40 Z" fill="#D7182A"/></svg></div>
+        <div><b>Símbolos</b><small>colores, logos</small></div>
+      </div>
+      <div class="sign">
+        <div class="sign__ic"><svg width="44" height="50" viewBox="0 0 44 50" aria-hidden="true"><g fill="#0E0E0E"><rect x="9" y="6" width="6" height="24" rx="3"/><rect x="16.5" y="2" width="6" height="28" rx="3"/><rect x="24" y="4" width="6" height="26" rx="3"/><rect x="31.5" y="9" width="6" height="21" rx="3"/><path d="M9 24 h28.5 v10 a14 14 0 0 1 -14 14 h-2 a14 14 0 0 1 -12.5 -8 z"/><rect x="0" y="22" width="6" height="18" rx="3" transform="rotate(-35 3 31)"/></g></svg></div>
+        <div><b>Gestos</b><small>cuerpo, rostro</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONCEPTOS ============ -->
+  <section class="sec concepts">
+    <div class="sec__hd"><span class="num">02</span><h2>Conceptos clave</h2><span class="note">Ejemplo: un corazón rojo</span></div>
+    <div class="concepts__grid">
+      <!-- Saussure -->
+      <div class="saus">
+        <svg width="340" height="200" viewBox="0 0 358 244" style="margin:0 auto" role="img" aria-label="Diagrama de Saussure: el signo une significado y significante">
+          <ellipse cx="128" cy="122" rx="112" ry="112" fill="none" stroke="#0E0E0E" stroke-width="3"/>
+          <line x1="16" y1="122" x2="240" y2="122" stroke="#0E0E0E" stroke-width="3"/>
+          <!-- significado: concepto -->
+          <path d="M128 98 C 103 80 92 70 92 58 A 16 16 0 0 1 128 50 A 16 16 0 0 1 164 58 C 164 70 153 80 128 98 Z" fill="#D7182A"/>
+          <g fill="#D7182A"><circle cx="72" cy="66" r="3"/><circle cx="184" cy="66" r="3"/><circle cx="128" cy="30" r="3"/></g>
+          <!-- significante: forma -->
+          <text x="128" y="172" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="32" fill="#0E0E0E">“corazón”</text>
+          <text x="128" y="196" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" fill="#4A4A4A">ko · ɾa · ˈθon</text>
+          <!-- flechas -->
+          <path d="M8 78 v88" stroke="#D7182A" stroke-width="3" fill="none"/><path d="M2 86 l6 -10 l6 10" fill="#D7182A"/><path d="M2 158 l6 10 l6 -10" fill="#D7182A"/>
+          <!-- etiquetas -->
+          <line x1="244" y1="70" x2="256" y2="70" stroke="#0E0E0E" stroke-width="2"/>
+          <text x="260" y="66" font-family="Montserrat,sans-serif" font-weight="800" font-size="13.5" fill="#B3121F">SIGNIFICADO</text>
+          <text x="260" y="84" font-family="Inter,sans-serif" font-size="13" fill="#4A4A4A">el concepto</text>
+          <line x1="244" y1="170" x2="256" y2="170" stroke="#0E0E0E" stroke-width="2"/>
+          <text x="260" y="166" font-family="Montserrat,sans-serif" font-weight="800" font-size="13.5" fill="#0E0E0E">SIGNIFICANTE</text>
+          <text x="260" y="184" font-family="Inter,sans-serif" font-size="13" fill="#4A4A4A">la forma</text>
+          <text x="260" y="200" font-family="Inter,sans-serif" font-size="13" fill="#4A4A4A">perceptible</text>
+        </svg>
+        <p class="saus__cap" style="margin-top:6px"><strong style="color:#1A1A1A">Saussure:</strong> el signo une dos caras inseparables.</p>
+      </div>
+      <!-- Escalera -->
+      <div class="ladder">
+        <div class="step step--1"><div class="step__n">A</div><div class="step__b"><b>Denotación</b><span>Lo que se ve: <strong>una figura roja con forma de corazón.</strong></span></div></div>
+        <div class="step step--2"><div class="step__n">B</div><div class="step__b"><b>Connotación</b><span>Lo que se asocia: <strong>amor, cariño, afecto, solidaridad.</strong></span></div></div>
+        <div class="step step--3"><div class="step__n">C</div><div class="step__b"><b>Interpretación</b><span>Lo que cada receptor comprende <strong>según su contexto y cultura.</strong></span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PEIRCE ============ -->
+  <section class="sec peirce">
+    <div class="sec__hd"><span class="num">03</span><h2>Tres tipos de signo según Peirce</h2></div>
+    <div class="peirce__grid">
+      <svg width="240" height="194" viewBox="0 0 260 210" role="img" aria-label="Triángulo de Peirce: signo, objeto e interpretante">
+        <path d="M130 26 L28 170 L232 170 Z" fill="none" stroke="#0E0E0E" stroke-width="3"/>
+        <path d="M130 26 L28 170 L232 170 Z" fill="#D7182A" opacity=".08"/>
+        <circle cx="130" cy="26" r="11" fill="#D7182A"/>
+        <circle cx="28" cy="170" r="11" fill="#0E0E0E"/>
+        <circle cx="232" cy="170" r="11" fill="#0E0E0E"/>
+        <text x="148" y="20" font-family="Montserrat,sans-serif" font-weight="800" font-size="15" fill="#B3121F">SIGNO</text>
+        <text x="4" y="200" font-family="Montserrat,sans-serif" font-weight="800" font-size="15" fill="#0E0E0E">OBJETO</text>
+        <text x="256" y="200" text-anchor="end" font-family="Montserrat,sans-serif" font-weight="800" font-size="15" fill="#0E0E0E">INTERPRETANTE</text>
+        <text x="130" y="128" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" fill="#4A4A4A">relación</text>
+        <text x="130" y="145" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" fill="#4A4A4A">triádica</text>
+      </svg>
+      <div class="ptype">
+        <div class="ptype__ic"><svg width="64" height="74" viewBox="0 0 84 96" aria-hidden="true"><rect x="2" y="2" width="80" height="92" fill="#fff" stroke="#0E0E0E" stroke-width="3"/><circle cx="42" cy="38" r="16" fill="#0E0E0E"/><path d="M14 92 C 14 68 26 58 42 58 C 58 58 70 68 70 92 Z" fill="#0E0E0E"/></svg></div>
+        <b>Ícono</b><span class="rel">Semejanza</span><p>Se parece a su objeto, como un retrato.</p>
+      </div>
+      <div class="ptype ptype--hl">
+        <div class="ptype__ic"><svg width="62" height="74" viewBox="0 0 84 100" aria-hidden="true"><path d="M34 46 c -10 -8 8 -14 -2 -24 M50 44 c -10 -8 8 -14 -2 -24 M42 30 c -10 -8 8 -14 -2 -24" fill="none" stroke="#4A4A4A" stroke-width="4" stroke-linecap="round"/><path d="M42 96 C 22 96 16 82 22 70 C 26 62 30 62 32 54 C 38 60 38 66 42 66 C 42 58 48 52 54 48 C 54 58 66 64 64 80 C 63 90 56 96 42 96 Z" fill="#D7182A"/><path d="M42 96 C 34 96 31 89 34 83 C 36 79 40 78 42 74 C 46 80 52 84 50 90 C 49 94 46 96 42 96 Z" fill="#FAF8F5"/></svg></div>
+        <b>Índice</b><span class="rel">Conexión</span><p>Señala algo real: el humo indica fuego.</p>
+      </div>
+      <div class="ptype">
+        <div class="ptype__ic"><svg width="62" height="74" viewBox="0 0 84 100" aria-hidden="true"><rect x="10" y="6" width="5" height="92" fill="#0E0E0E"/><rect x="15" y="10" width="62" height="18" fill="#0E0E0E"/><rect x="15" y="28" width="62" height="18" fill="#D7182A"/><rect x="15" y="46" width="62" height="10" fill="#fff" stroke="#0E0E0E" stroke-width="2"/></svg></div>
+        <b>Símbolo</b><span class="rel">Convención</span><p>Se aprende culturalmente: una bandera.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CASO DOVE ============ -->
+  <section class="dove" aria-label="Mini caso: Dove Real Beauty Sketches">
+    <div class="dove__art">
+      <svg width="328" height="216" viewBox="0 0 380 250" role="img" aria-label="Dos retratos de la misma mujer, lado a lado">
+        <!-- retrato 1 -->
+        <rect x="0" y="0" width="172" height="212" fill="#FAF8F5"/>
+        <g fill="none" stroke="#0E0E0E" stroke-width="2.4" stroke-linecap="round">
+          <path d="M86 34 C 54 34 46 62 48 92 C 50 124 66 148 86 150 C 106 148 122 124 124 92 C 126 62 118 34 86 34 Z"/>
+          <path d="M60 86 h18 M94 86 h18"/>
+          <path d="M66 98 q6 3 10 0 M98 98 q6 3 10 0"/>
+          <path d="M86 98 v22 l-6 4"/>
+          <path d="M72 132 q14 -4 28 0"/>
+          <path d="M60 78 l20 4 M112 78 l-20 4"/>
+          <path d="M46 92 C 34 70 44 30 86 26 C 128 30 138 70 126 92"/>
+          <path d="M70 150 v24 M102 150 v24 M30 212 C 34 186 54 176 70 174 M142 212 C 138 186 118 176 102 174"/>
+        </g>
+        <!-- retrato 2 -->
+        <rect x="190" y="0" width="172" height="212" fill="#FAF8F5"/>
+        <g fill="none" stroke="#0E0E0E" stroke-width="2.4" stroke-linecap="round" transform="translate(190 0)">
+          <path d="M86 38 C 58 38 50 62 52 90 C 54 120 68 142 86 144 C 104 142 118 120 120 90 C 122 62 114 38 86 38 Z"/>
+          <path d="M64 84 q8 -5 16 0 M92 84 q8 -5 16 0"/>
+          <circle cx="72" cy="94" r="3.4" fill="#0E0E0E"/><circle cx="100" cy="94" r="3.4" fill="#0E0E0E"/>
+          <path d="M86 98 v18 l-4 3"/>
+          <path d="M72 126 q14 10 28 0"/>
+          <path d="M50 94 C 36 62 50 28 86 28 C 122 28 136 62 122 94 M50 94 C 46 120 50 140 58 150 M122 94 C 126 120 122 140 114 150"/>
+          <path d="M72 144 v28 M100 144 v28 M30 212 C 34 186 54 176 72 172 M142 212 C 138 186 118 176 100 172"/>
+        </g>
+        <rect x="190" y="0" width="172" height="212" fill="none" stroke="#FF3B4E" stroke-width="4"/>
+        <text x="86" y="236" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="700" font-size="13" letter-spacing="1.5" fill="#CFCBC4">SEGÚN ELLA</text>
+        <text x="276" y="236" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="700" font-size="13" letter-spacing="1.5" fill="#FF3B4E">SEGÚN OTRA PERSONA</text>
+      </svg>
+    </div>
+    <div class="dove__txt">
+      <p class="dove__lbl">04 · Mini caso <i>Dove, 2013</i></p>
+      <h3>Real Beauty Sketches</h3>
+      <div class="dove__pair">
+        <div><b>Denotación</b><p>Dos retratos hablados de la misma mujer.</p></div>
+        <div><b>Connotación</b><p>Autoestima, autocrítica y “belleza real”.</p></div>
+      </div>
+      <p class="dove__anchor">El lema <strong>“Eres más bella de lo que crees”</strong> ancla la lectura de la imagen.</p>
+    </div>
+  </section>
+
+  <!-- ============ AUTORES ============ -->
+  <section class="sec authors">
+    <div class="sec__hd"><span class="num">05</span><h2>Autores clave</h2></div>
+    <div class="authors__row">
+      <div class="author"><div class="author__top"><div class="author__i">S</div><div><b>Saussure</b><small>1857–1913</small></div></div><p>Significante y significado.</p></div>
+      <div class="author"><div class="author__top"><div class="author__i">P</div><div><b>Peirce</b><small>1839–1914</small></div></div><p>Ícono, índice y símbolo.</p></div>
+      <div class="author"><div class="author__top"><div class="author__i">B</div><div><b>Barthes</b><small>1915–1980</small></div></div><p>Denotación, connotación y mito.</p></div>
+      <div class="author"><div class="author__top"><div class="author__i">E</div><div><b>Eco</b><small>1932–2016</small></div></div><p>Códigos culturales e interpretación.</p></div>
+      <div class="author"><div class="author__top"><div class="author__i">H</div><div><b>Hjelmslev</b><small>1899–1965</small></div></div><p>Planos de expresión y contenido.</p></div>
+    </div>
+  </section>
+
+  <!-- ============ APLICACIONES ============ -->
+  <section class="sec apps">
+    <div class="sec__hd"><span class="num">06</span><h2>¿Dónde se aplica?</h2></div>
+    <div class="apps__row">
+      <div class="app"><div class="app__ic"><svg width="34" height="30" viewBox="0 0 34 30" aria-hidden="true"><path d="M2 10 h7 l16 -8 v26 l-16 -8 h-7 z" fill="#fff"/><path d="M9 20 l3 9 h4 l-2 -9" fill="#fff"/><path d="M29 9 q4 6 0 12" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg></div><span>Publicidad</span></div>
+      <div class="app"><div class="app__ic"><svg width="34" height="28" viewBox="0 0 34 28" aria-hidden="true"><path d="M2 7 h8 l3 -5 h8 l3 5 h8 v19 h-30 z" fill="#fff"/><circle cx="17" cy="16" r="6" fill="#0E0E0E"/><circle cx="17" cy="16" r="3" fill="#D7182A"/></svg></div><span>Fotografía</span></div>
+      <div class="app"><div class="app__ic"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><g stroke="#fff" stroke-width="3.4" stroke-linecap="round"><path d="M11 3 l-3 26 M22 3 l-3 26 M4 11 h25 M3 21 h25"/></g></svg></div><span>Redes sociales</span></div>
+      <div class="app"><div class="app__ic"><svg width="36" height="26" viewBox="0 0 36 26" aria-hidden="true"><path d="M18 9 v-2 a4 4 0 1 0 -4 -4" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M18 9 L2 22 h32 z" stroke="#fff" stroke-width="2.6" fill="none" stroke-linejoin="round"/></svg></div><span>Moda</span></div>
+      <div class="app"><div class="app__ic"><svg width="36" height="30" viewBox="0 0 36 30" aria-hidden="true"><path d="M2 2 h20 v13 h-12 l-6 5 v-5 h-2 z" fill="#fff"/><path d="M14 18 h12 l6 5 v-5 h2 v-12 h-8 v12 z" fill="#D7182A"/></svg></div><span>Comunicación cotidiana</span></div>
+    </div>
+  </section>
+
+  <!-- ============ PIE ============ -->
+  <footer class="ft">
+    <span><span class="dot"></span>Fuente: Informe de investigación — <strong>[Estudiante]</strong><!-- EDITAR --></span>
+    <span>Tradición semiótica · Teorías de la comunicación</span>
+  </footer>
+</main>
+</div>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var poster=document.getElementById('poster'), frame=document.getElementById('frame');
+  var capture=document.documentElement.classList.contains('is-capture');
+  function fit(){
+    if(capture){poster.style.transform='none';frame.style.width='1080px';frame.style.height='1920px';return;}
+    var w=document.documentElement.clientWidth-32;
+    var s=Math.min(1,w/1080);
+    poster.style.transform=s<1?'scale('+s+')':'none';
+    frame.style.width=(1080*s)+'px';
+    frame.style.height=(1920*s)+'px';
+  }
+  fit();
+  window.addEventListener('resize',fit);
+  window.addEventListener('beforeprint',function(){poster.style.transform='none';frame.style.width='1080px';frame.style.height='1920px';});
+  window.addEventListener('afterprint',fit);
+})();
+</script>
+</body>
+</html>

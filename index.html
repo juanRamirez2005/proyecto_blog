@@ -1,0 +1,1172 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La tradición semiótica en la comunicación | Blog académico</title>
+  <meta name="description" content="Blog académico sobre la tradición semiótica en la comunicación: qué estudia, su pregunta central, autores (Saussure, Peirce, Barthes, Eco, Hjelmslev), aportes y análisis de la campaña Dove por la Belleza Real.">
+  <meta name="author" content="Nombre de la estudiante"><!-- EDITAR: nombre de la estudiante -->
+  <meta name="theme-color" content="#0E0E0E">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="La tradición semiótica en la comunicación">
+  <meta property="og:description" content="Cómo los signos producen significado: conceptos, autores, aportes y aplicación al análisis de la campaña Dove por la Belleza Real.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230E0E0E'/%3E%3Cpath d='M32 12 54 50H10Z' fill='none' stroke='%23FAF8F5' stroke-width='5' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='12' r='7' fill='%23D7182A'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Aplica el tema guardado antes de pintar (evita parpadeo) -->
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.className = d.className.replace('no-js', 'js');
+      try {
+        var t = localStorage.getItem('semiotica-theme');
+        if (t === 'dark' || t === 'light') { d.setAttribute('data-theme', t); }
+      } catch (e) { /* almacenamiento no disponible */ }
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <div class="progress" aria-hidden="true"><div class="progress__bar" id="progress-bar"></div></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="site-header__inner">
+      <a class="logo" href="#top" aria-label="Semiótica, ir al inicio">Semiótica<span class="logo__dot">.</span></a>
+
+      <nav class="main-nav" aria-label="Principal">
+        <ul class="main-nav__list">
+          <li><a href="#que-estudia">Conceptos</a></li>
+          <li><a href="#contexto">Contexto</a></li>
+          <li><a href="#autores">Autores</a></li>
+          <li><a href="#aportes">Aportes</a></li>
+          <li><a href="#caso-dove">Caso Dove</a></li>
+          <li><a href="#infografia">Infografía</a></li>
+          <li><a href="#quiz">Quiz</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <button class="icon-btn" type="button" id="share-btn" aria-label="Copiar enlace del artículo">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+        </button>
+        <button class="icon-btn" type="button" id="theme-btn" aria-label="Activar modo oscuro" aria-pressed="false">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" type="button" id="menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h12"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menú móvil off-canvas -->
+  <div class="drawer" id="drawer" hidden>
+    <div class="drawer__backdrop" data-close-drawer></div>
+    <div class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+      <div class="drawer__head">
+        <p class="drawer__title" id="drawer-title">Menú</p>
+        <button class="icon-btn" type="button" data-close-drawer aria-label="Cerrar menú">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <nav aria-label="Menú móvil">
+        <ol class="drawer__list">
+          <li><a href="#introduccion"><span>00</span>Introducción</a></li>
+          <li><a href="#que-estudia"><span>01</span>Qué estudia</a></li>
+          <li><a href="#pregunta"><span>02</span>Pregunta central</a></li>
+          <li><a href="#contexto"><span>03</span>Contexto histórico</a></li>
+          <li><a href="#autores"><span>04</span>Autores</a></li>
+          <li><a href="#aportes"><span>05</span>Aportes</a></li>
+          <li><a href="#caso-dove"><span>06</span>Caso Dove</a></li>
+          <li><a href="#infografia"><span>07</span>Infografía</a></li>
+          <li><a href="#analisis"><span>08</span>Análisis final</a></li>
+          <li><a href="#quiz"><span>Q</span>Autoevaluación</a></li>
+          <li><a href="#conclusion"><span>09</span>Conclusión</a></li>
+          <li><a href="#fuentes"><span>10</span>Fuentes</a></li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__inner">
+      <div class="hero__text">
+        <p class="kicker"><span class="kicker__mark" aria-hidden="true"></span>Informe de investigación · Comunicación</p>
+        <h1 class="hero__title" id="hero-title">La tradición <em>semiótica</em> en la comunicación</h1>
+        <p class="hero__lead">¿Cómo se produce y se interpreta el significado a través de los signos?</p>
+        <p class="hero__sub">Conceptos, autores, aportes y aplicación al análisis publicitario.</p>
+
+        <dl class="hero__meta">
+          <div><dt>Estudiante</dt><dd><!-- EDITAR: nombre de la estudiante -->Nombre de la estudiante</dd></div>
+          <div><dt>Asignatura</dt><dd><!-- EDITAR: asignatura -->Nombre de la asignatura</dd></div>
+          <div><dt>Docente</dt><dd><!-- EDITAR: docente -->Nombre del docente</dd></div>
+          <div><dt>Fecha</dt><dd><!-- EDITAR: fecha de entrega -->Fecha de entrega</dd></div>
+          <div><dt>Lectura</dt><dd><span id="reading-time">15</span> min</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero__art" aria-hidden="true">
+        <svg class="hero-svg" viewBox="0 0 400 440">
+          <circle class="hero-svg__orbit" cx="200" cy="250" r="170"/>
+          <circle class="hero-svg__orbit hero-svg__orbit--2" cx="200" cy="250" r="128"/>
+          <path class="hero-svg__tri" d="M45 340 L200 70 L355 340"/>
+          <path class="hero-svg__base" d="M45 340 L355 340"/>
+          <circle class="hero-svg__node hero-svg__node--red" cx="200" cy="70" r="18"/>
+          <circle class="hero-svg__node" cx="355" cy="340" r="12"/>
+          <circle class="hero-svg__node" cx="45" cy="340" r="12"/>
+          <circle class="hero-svg__pulse" cx="200" cy="70" r="18"/>
+          <text x="200" y="30" text-anchor="middle" class="hero-svg__label">INTERPRETANTE</text>
+          <text x="45" y="385" text-anchor="middle" class="hero-svg__label">SIGNO</text>
+          <text x="355" y="385" text-anchor="middle" class="hero-svg__label">OBJETO</text>
+          <text x="200" y="262" text-anchor="middle" class="hero-svg__big">S</text>
+        </svg>
+        <p class="hero__art-caption">Fig. 0 — La tríada de Peirce: un signo, su objeto y la idea que produce.</p>
+      </div>
+    </div>
+    <a class="hero__scroll" href="#introduccion">Empezar a leer <span aria-hidden="true">↓</span></a>
+  </section>
+
+  <!-- ============ CUERPO ============ -->
+  <div class="layout" id="contenido">
+
+    <aside class="toc" id="toc" aria-label="Índice del artículo">
+      <div class="toc__inner">
+        <div class="toc__head">
+          <p class="toc__title">Índice</p>
+          <button class="icon-btn toc__close" type="button" id="toc-close" aria-label="Cerrar índice">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          </button>
+        </div>
+        <ol class="toc__list">
+          <li><a href="#introduccion"><span>00</span>Introducción</a></li>
+          <li><a href="#que-estudia"><span>01</span>Qué estudia</a></li>
+          <li><a href="#pregunta"><span>02</span>Pregunta central</a></li>
+          <li><a href="#contexto"><span>03</span>Contexto histórico</a></li>
+          <li><a href="#autores"><span>04</span>Autores</a></li>
+          <li><a href="#aportes"><span>05</span>Aportes</a></li>
+          <li><a href="#caso-dove"><span>06</span>Caso Dove</a></li>
+          <li><a href="#infografia"><span>07</span>Presentación gráfica</a></li>
+          <li><a href="#este-blog"><span>+</span>Este blog es un signo</a></li>
+          <li><a href="#analisis"><span>08</span>Análisis final</a></li>
+          <li><a href="#quiz"><span>Q</span>Autoevaluación</a></li>
+          <li><a href="#conclusion"><span>09</span>Conclusión</a></li>
+          <li><a href="#glosario"><span>G</span>Glosario</a></li>
+          <li><a href="#fuentes"><span>10</span>Fuentes</a></li>
+        </ol>
+      </div>
+    </aside>
+
+    <main class="article" id="main">
+
+      <!-- ===== INTRODUCCIÓN ===== -->
+      <section class="section" id="introduccion" aria-labelledby="h-intro">
+        <header class="section__head reveal">
+          <span class="section__num" aria-hidden="true">00</span>
+          <div>
+            <p class="section__kicker">Para empezar</p>
+            <h2 class="section__title" id="h-intro">Introducción</h2>
+          </div>
+        </header>
+        <div class="prose">
+          <p class="dropcap">La tradición semiótica es una perspectiva de estudio de la comunicación que permite comprender cómo los <a class="term" href="#g-signo" data-term="signo">signos</a> producen significados y cómo las personas los interpretan. Estos signos pueden ser palabras, imágenes, colores, sonidos, gestos, símbolos y objetos presentes en la vida cotidiana.</p>
+          <p>En la comunicación, un mensaje no transmite únicamente información explícita. También puede comunicar emociones, valores culturales, ideas sociales e identidades mediante los elementos que utiliza. Por ejemplo, una campaña publicitaria puede emplear colores, fotografías, tipografías y expresiones faciales para comunicar confianza, belleza, juventud o exclusividad.</p>
+          <p>Este informe desarrolla los aspectos fundamentales de la tradición semiótica y los aplica a la campaña publicitaria <strong>Dove por la Belleza Real</strong>, con el propósito de comprender su utilidad para la comunicación y el diseño visual.</p>
+        </div>
+
+        <aside class="deepen reveal" aria-labelledby="deepen-craig">
+          <p class="deepen__tag"><span aria-hidden="true">+</span> Para profundizar</p>
+          <h3 class="deepen__title" id="deepen-craig">Una de las siete tradiciones de Craig</h3>
+          <p>En su artículo <cite>“Communication Theory as a Field”</cite> (1999), Robert T. Craig organiza la teoría de la comunicación en siete tradiciones: retórica, <strong>semiótica</strong>, fenomenológica, cibernética, sociopsicológica, sociocultural y crítica. Para la tradición semiótica, la comunicación es una <em>mediación intersubjetiva a través de signos</em>: los signos son el puente entre lo que una persona piensa y lo que otra entiende.</p>
+          <p>El problema que esta tradición intenta resolver es el <strong>malentendido</strong>, es decir, la brecha entre puntos de vista subjetivos. Si cada persona interpreta desde su experiencia, ¿cómo logramos compartir significados?</p>
+          <p class="deepen__note">Ampliación: no forma parte del informe original.</p>
+        </aside>
+      </section>
+
+      <!-- ===== 01 ===== -->
+      <section class="section" id="que-estudia" aria-labelledby="h-1">
+        <header class="section__head reveal">
+          <span class="section__num" aria-hidden="true">01</span>
+          <div>
+            <p class="section__kicker">Definición</p>
+            <h2 class="section__title" id="h-1">¿Qué es y qué estudia la tradición semiótica?</h2>
+          </div>
+        </header>
+        <div class="prose">
+          <p>La tradición semiótica estudia los signos y los procesos mediante los cuales estos representan objetos, conceptos o ideas y adquieren significado. Un signo puede ser una palabra escrita, una fotografía, una señal de tránsito, un gesto o un sonido.</p>
+          <p>La semiótica permite entender que la comunicación no depende exclusivamente del lenguaje verbal. También utilizamos elementos visuales y no verbales para expresar ideas y comprender los mensajes que recibimos.</p>
+          <h3>¿Qué estudia específicamente?</h3>
+        </div>
+
+        <ol class="study-grid reveal">
+          <li class="study-grid__item"><span class="study-grid__n">a</span><strong>Los signos y los símbolos</strong><span>Cómo funcionan y qué representan.</span></li>
+          <li class="study-grid__item"><span class="study-grid__n">b</span><strong>La producción de significado</strong><span>Cómo un elemento llega a comunicar una idea.</span></li>
+          <li class="study-grid__item"><span class="study-grid__n">c</span><strong>La interpretación</strong><span>Cómo las personas comprenden los mensajes.</span></li>
+          <li class="study-grid__item"><span class="study-grid__n">d</span><strong>El contexto cultural</strong><span>Cómo la sociedad influye en el significado de los signos.</span></li>
+          <li class="study-grid__item"><span class="study-grid__n">e</span><strong>Los mensajes visuales</strong><span>Cómo las imágenes, los colores y la composición comunican ideas.</span></li>
+          <li class="study-grid__item"><span class="study-grid__n">f</span><strong>Los <a class="term" href="#g-codigo" data-term="codigo">códigos</a> culturales</strong><span>Convenciones compartidas que ayudan a interpretar mensajes.</span></li>
+        </ol>
+
+        <div class="prose">
+          <h3>Ejemplo cotidiano: un corazón rojo</h3>
+          <p>El corazón rojo puede representar una figura con forma de corazón y color rojo (descripción directa, o <a class="term" href="#g-denotacion" data-term="denotacion">denotación</a>), pero también puede asociarse con amor, cariño, afecto o solidaridad (<a class="term" href="#g-connotacion" data-term="connotacion">connotación</a>). En una publicación romántica puede expresar amor; en una campaña de salud puede representar el corazón o el cuidado de la salud. <strong>El contexto influye en su interpretación.</strong></p>
+        </div>
+
+        <!-- Componente: corazón rojo -->
+        <figure class="heart-lab reveal" id="heart-lab">
+          <div class="heart-lab__stage" data-mode="connotacion" data-context="romantico">
+            <svg class="heart-lab__svg" viewBox="0 0 240 220" aria-hidden="true">
+              <g class="heart-ctx heart-ctx--romantico">
+                <path class="heart-mini" transform="translate(-34 -44)" d="M40 54c-6-8-20-4-18 7 2 8 18 18 18 18s16-10 18-18c2-11-12-15-18-7Z"/>
+                <path class="heart-mini" transform="translate(30 -28)" d="M200 36c-4-6-14-3-13 5 1 6 13 13 13 13s12-7 13-13c1-8-9-11-13-5Z"/>
+              </g>
+              <path class="heart-shape" d="M120 196C60 150 26 116 26 78c0-28 21-48 46-48 21 0 37 12 48 30 11-18 27-30 48-30 25 0 46 20 46 48 0 38-34 72-94 118Z"/>
+              <g class="heart-ctx heart-ctx--salud">
+                <path class="heart-ecg" d="M10 110h62l12-28 18 58 16-44 10 14h102"/>
+              </g>
+              <g class="heart-ctx heart-ctx--solidaridad">
+                <path class="heart-hands" d="M14 170c30 0 50 8 74 30h64c24-22 44-30 74-30"/>
+                <path class="heart-hands" d="M40 150c18 6 30 16 44 32M200 150c-18 6-30 16-44 32"/>
+              </g>
+              <g class="heart-dim">
+                <path d="M26 206h188" />
+                <path d="M26 200v12M214 200v12"/>
+              </g>
+            </svg>
+          </div>
+
+          <div class="heart-lab__controls">
+            <p class="heart-lab__label" id="heart-level-label">Nivel de lectura</p>
+            <div class="segmented" role="group" aria-labelledby="heart-level-label">
+              <button type="button" class="segmented__btn" data-heart-mode="denotacion" aria-pressed="false">Denotación</button>
+              <button type="button" class="segmented__btn" data-heart-mode="connotacion" aria-pressed="true">Connotación</button>
+            </div>
+
+            <p class="heart-lab__label" id="heart-ctx-label">Contexto</p>
+            <div class="chips" role="group" aria-labelledby="heart-ctx-label">
+              <button type="button" class="chip" data-heart-context="romantico" aria-pressed="true">Publicación romántica</button>
+              <button type="button" class="chip" data-heart-context="salud" aria-pressed="false">Campaña de salud</button>
+              <button type="button" class="chip" data-heart-context="solidaridad" aria-pressed="false">Causa solidaria</button>
+            </div>
+
+            <div class="heart-lab__out" aria-live="polite">
+              <p class="heart-lab__out-level" id="heart-out-level">Connotación · publicación romántica</p>
+              <p class="heart-lab__out-text" id="heart-out-text">Amor, cariño y afecto entre dos personas.</p>
+            </div>
+          </div>
+          <figcaption class="figcap">Fig. 1 — Cambia el nivel y el contexto: la denotación permanece, la connotación cambia con el contexto.</figcaption>
+        </figure>
+      </section>
+
+      <!-- ===== 02 ===== -->
+      <section class="section" id="pregunta" aria-labelledby="h-2">
+        <header class="section__head reveal">
+          <span class="section__num" aria-hidden="true">02</span>
+          <div>
+            <p class="section__kicker">La pregunta</p>
+            <h2 class="section__title" id="h-2">¿Cuál es la pregunta de la tradición semiótica sobre la comunicación?</h2>
+          </div>
+        </header>
+
+        <blockquote class="pullquote reveal">
+          <p>¿Cómo se produce y se interpreta el significado a través de los signos?</p>
+          <footer>— Pregunta central de la tradición semiótica</footer>
+        </blockquote>
+
+        <div class="prose">
+          <p>La tradición semiótica investiga cómo las personas construyen sentido a partir de los mensajes y cómo los elementos utilizados influyen en su interpretación. No se limita a identificar lo que aparece en un mensaje: también examina qué representa, qué asociaciones culturales produce y qué interpretaciones puede generar.</p>
+          <p>Por ejemplo, en un anuncio de perfume podemos identificar el frasco, los colores, el texto y la fotografía. Además, podemos interpretar que el anuncio intenta comunicar lujo, elegancia, sensualidad o sofisticación. Estas asociaciones se construyen mediante los elementos visuales y los códigos culturales.</p>
+        </div>
+
+        <figure class="split-read reveal">
+          <div class="split-read__col">
+            <p class="split-read__head">Lo que vemos</p>
+            <ul>
+              <li>El frasco</li>
+              <li>Los colores</li>
+              <li>El texto</li>
+              <li>La fotografía</li>
+            </ul>
+          </div>
+          <div class="split-read__arrow" aria-hidden="true">
+            <svg viewBox="0 0 60 24"><path d="M2 12h52M44 3l10 9-10 9"/></svg>
+          </div>
+          <div class="split-read__col split-read__col--dark">
+            <p class="split-read__head">Lo que interpretamos</p>
+            <ul>
+              <li>Lujo</li>
+              <li>Elegancia</li>
+              <li>Sensualidad</li>
+              <li>Sofisticación</li>
+            </ul>
+          </div>
+          <figcaption class="figcap">Fig. 2 — Anatomía de un anuncio de perfume: de los elementos visibles a las asociaciones culturales.</figcaption>
+        </figure>
+      </section>
+
+      <!-- ===== 03 ===== -->
+      <section class="section" id="contexto" aria-labelledby="h-3">
+        <header class="section__head reveal">
+          <span class="section__num" aria-hidden="true">03</span>
+          <div>
+            <p class="section__kicker">Historia</p>
+            <h2 class="section__title" id="h-3">¿En qué contexto histórico e intelectual surge?</h2>
+          </div>
+        </header>
+        <div class="prose">
+          <p>La tradición semiótica tiene antecedentes en la filosofía antigua, pero sus principales desarrollos modernos se produjeron entre finales del siglo XIX y comienzos del siglo XX. Dos figuras fundamentales fueron Ferdinand de Saussure y Charles Sanders Peirce, quienes contribuyeron desde perspectivas diferentes.</p>
+        </div>
+
+        <!-- Línea de tiempo -->
+        <figure class="timeline reveal" aria-labelledby="timeline-cap">
+          <ol class="timeline__list">
+            <li class="timeline__item"><span class="timeline__year">Antigüedad</span><p><strong>Platón, Aristóteles, los estoicos y San Agustín</strong> reflexionan sobre la relación entre palabras, cosas e ideas.</p></li>
+            <li class="timeline__item"><span class="timeline__year">1690</span><p><strong>John Locke</strong> usa el término <em>semiotiké</em> para la doctrina de los signos.</p></li>
+            <li class="timeline__item"><span class="timeline__year">1839–1914</span><p><strong>Charles S. Peirce</strong> desarrolla una teoría lógica del signo: ícono, índice y símbolo.</p></li>
+            <li class="timeline__item timeline__item--key"><span class="timeline__year">1916</span><p>Se publica, póstumo, el <strong><cite>Curso de lingüística general</cite></strong> de Saussure.</p></li>
+            <li class="timeline__item"><span class="timeline__year">1943</span><p><strong>Louis Hjelmslev</strong> publica <cite>Prolegómenos a una teoría del lenguaje</cite>: expresión y contenido.</p></li>
+            <li class="timeline__item"><span class="timeline__year">1957 · 1964</span><p><strong>Roland Barthes</strong>: <cite>Mitologías</cite> y <cite>Retórica de la imagen</cite>.</p></li>
+            <li class="timeline__item"><span class="timeline__year">1975</span><p><strong>Umberto Eco</strong>: <cite>Tratado de semiótica general</cite>.</p></li>
+            <li class="timeline__item"><span class="timeline__year">1999</span><p><strong>Robert T. Craig</strong> sitúa la semiótica entre las siete tradiciones de la teoría de la comunicación.</p></li>
+            <li class="timeline__item timeline__item--key"><span class="timeline__year">2004 · 2013</span><p>Dove lanza <strong>por la Belleza Real</strong>; en 2013 publica <cite>Real Beauty Sketches</cite>.</p></li>
+          </ol>
+          <figcaption class="figcap" id="timeline-cap">Fig. 3 — Cronología de la tradición semiótica (elaboración propia, con datos ampliados).</figcaption>
+        </figure>
+
+        <div class="prose">
+          <h3>Ferdinand de Saussure (1857–1913)</h3>
+          <p>Lingüista suizo que propuso estudiar la lengua como un sistema de signos. Sus ideas contribuyeron al desarrollo de la semiología, que estudia los signos en la vida social. Su propuesta distingue entre <a class="term" href="#g-significante" data-term="significante">significante</a>, la forma perceptible del signo, y <a class="term" href="#g-significado" data-term="significado">significado</a>, el concepto asociado.</p>
+        </div>
+
+        <!-- Diagrama Saussure -->
+        <figure class="diagram reveal" id="saussure" data-diagram>
+          <div class="diagram__art">
+            <svg viewBox="0 0 320 300" class="diagram__svg" role="group" aria-label="Diagrama del signo lingüístico de Saussure. Selecciona una parte.">
+              <ellipse cx="160" cy="150" rx="120" ry="130" class="d-outline"/>
+              <line x1="40" y1="150" x2="280" y2="150" class="d-line"/>
+              <g class="d-node" tabindex="0" role="button" aria-pressed="true" data-key="significado" aria-label="Significado">
+                <path class="d-hit" d="M40 150a120 130 0 0 1 240 0Z"/>
+                <g class="d-tree">
+                  <path d="M160 128v-22"/>
+                  <circle cx="160" cy="88" r="22"/>
+                  <circle cx="146" cy="96" r="12"/>
+                  <circle cx="174" cy="96" r="12"/>
+                </g>
+                <text x="160" y="58" text-anchor="middle" class="d-label">SIGNIFICADO</text>
+              </g>
+              <g class="d-node" tabindex="0" role="button" aria-pressed="false" data-key="significante" aria-label="Significante">
+                <path class="d-hit" d="M40 150a120 130 0 0 0 240 0Z"/>
+                <text x="160" y="205" text-anchor="middle" class="d-word">“árbol”</text>
+                <text x="160" y="248" text-anchor="middle" class="d-label">SIGNIFICANTE</text>
+              </g>
+              <g class="d-node" tabindex="0" role="button" aria-pressed="false" data-key="arbitrario" aria-label="Relación entre ambos: arbitrariedad">
+                <rect class="d-hit" x="282" y="70" width="38" height="160" />
+                <path class="d-arrow" d="M300 92v116M292 102l8-10 8 10M292 198l8 10 8-10"/>
+              </g>
+            </svg>
+          </div>
+          <div class="diagram__panel" aria-live="polite">
+            <p class="diagram__eyebrow">Saussure · el signo lingüístico</p>
+            <div class="diagram__content" data-panel="significado">
+              <h4>Significado</h4>
+              <p>Es el <strong>concepto</strong>: la idea mental de “árbol” que aparece cuando escuchamos o leemos la palabra.</p>
+            </div>
+            <div class="diagram__content" data-panel="significante" hidden>
+              <h4>Significante</h4>
+              <p>Es la <strong>forma perceptible</strong> del signo: el sonido o la escritura de la palabra “árbol”.</p>
+            </div>
+            <div class="diagram__content" data-panel="arbitrario" hidden>
+              <h4>Una relación arbitraria <span class="badge">Para profundizar</span></h4>
+              <p>Para Saussure, el vínculo entre significante y significado es <strong>arbitrario</strong>: nada en las letras de “árbol” se parece a un árbol. Por eso cada lengua usa formas distintas (<em>tree</em>, <em>arbre</em>, <em>Baum</em>) para el mismo concepto.</p>
+            </div>
+            <p class="diagram__hint">Selecciona una parte del diagrama.</p>
+          </div>
+          <figcaption class="figcap">Fig. 4 — El signo según Saussure: dos caras inseparables, como las dos caras de una hoja.</figcaption>
+        </figure>
+
+        <div class="prose">
+          <h3>Charles Sanders Peirce (1839–1914)</h3>
+          <p>Filósofo estadounidense que desarrolló una teoría de los signos vinculada con la lógica y la interpretación. Su modelo relaciona signo, objeto e <a class="term" href="#g-interpretante" data-term="interpretante">interpretante</a>. También distinguió entre íconos, índices y símbolos.</p>
+        </div>
+
+        <!-- Triángulo de Peirce -->
+        <figure class="diagram diagram--dark reveal" id="peirce" data-diagram>
+          <div class="diagram__art">
+            <svg viewBox="0 0 340 300" class="diagram__svg" role="group" aria-label="Triángulo semiótico de Peirce. Selecciona un vértice.">
+              <path d="M40 250 L170 50 L300 250" class="d-tri"/>
+              <path d="M40 250 L300 250" class="d-tri-base"/>
+              <g class="d-node" tabindex="0" role="button" aria-pressed="true" data-key="interpretante" aria-label="Interpretante">
+                <circle class="d-vertex" cx="170" cy="50" r="26"/>
+                <text x="170" y="56" text-anchor="middle" class="d-vtext">I</text>
+                <text x="170" y="14" text-anchor="middle" class="d-label">INTERPRETANTE</text>
+              </g>
+              <g class="d-node" tabindex="0" role="button" aria-pressed="false" data-key="signo" aria-label="Signo o representamen">
+                <circle class="d-vertex" cx="40" cy="250" r="26"/>
+                <text x="40" y="256" text-anchor="middle" class="d-vtext">S</text>
+                <text x="40" y="294" text-anchor="middle" class="d-label">SIGNO</text>
+              </g>
+              <g class="d-node" tabindex="0" role="button" aria-pressed="false" data-key="objeto" aria-label="Objeto">
+                <circle class="d-vertex" cx="300" cy="250" r="26"/>
+                <text x="300" y="256" text-anchor="middle" class="d-vtext">O</text>
+                <text x="300" y="294" text-anchor="middle" class="d-label">OBJETO</text>
+              </g>
+              <g class="d-node" tabindex="0" role="button" aria-pressed="false" data-key="semiosis" aria-label="Semiosis ilimitada">
+                <circle class="d-hit d-hit--ring" cx="170" cy="178" r="34"/>
+                <path class="d-loop" d="M150 178a20 20 0 1 1 20 20"/>
+                <path class="d-loop" d="M164 192l6 6-6 6"/>
+              </g>
+            </svg>
+          </div>
+          <div class="diagram__panel" aria-live="polite">
+            <p class="diagram__eyebrow">Peirce · la tríada del signo</p>
+            <div class="diagram__content" data-panel="interpretante">
+              <h4>Interpretante</h4>
+              <p>Es el <strong>efecto o idea</strong> que el signo produce en la mente de quien lo interpreta. Ejemplo: al ver humo pensamos “hay un incendio”.</p>
+            </div>
+            <div class="diagram__content" data-panel="signo" hidden>
+              <h4>Signo (representamen)</h4>
+              <p>Es aquello que <strong>está en lugar de otra cosa</strong> y que percibimos: en el ejemplo, el humo que vemos.</p>
+            </div>
+            <div class="diagram__content" data-panel="objeto" hidden>
+              <h4>Objeto</h4>
+              <p>Es aquello a lo que el signo <strong>se refiere</strong>: el fuego que causa el humo.</p>
+            </div>
+            <div class="diagram__content" data-panel="semiosis" hidden>
+              <h4>Semiosis ilimitada <span class="badge">Para profundizar</span></h4>
+              <p>El interpretante es, a su vez, <strong>otro signo</strong> que puede ser interpretado de nuevo, y así sucesivamente. Umberto Eco retomó esta idea: el significado nunca queda cerrado del todo.</p>
+            </div>
+            <p class="diagram__hint">Selecciona un vértice o el centro del triángulo.</p>
+          </div>
+          <figcaption class="figcap">Fig. 5 — Triángulo semiótico de Peirce. La base punteada indica que el signo no se conecta directamente con el objeto: lo hace a través del interpretante.</figcaption>
+        </figure>
+
+        <div class="prose">
+          <h3>Contexto intelectual</h3>
+          <p>La semiótica se relaciona con la lingüística, la filosofía, la lógica y, posteriormente, con el estructuralismo y los estudios culturales. Estas corrientes buscan comprender cómo funcionan los sistemas de signos y cómo las relaciones entre sus elementos producen significado. Saussure se asocia principalmente con la semiología lingüística y social; Peirce aborda los signos desde una perspectiva filosófica y lógica.</p>
+        </div>
+
+        <aside class="deepen reveal" aria-labelledby="deepen-hist">
+          <p class="deepen__tag"><span aria-hidden="true">+</span> Para profundizar</p>
+          <h3 class="deepen__title" id="deepen-hist">Antecedentes y datos clave</h3>
+          <ul class="deepen__list">
+            <li><strong>Raíces antiguas.</strong> Platón, Aristóteles, los estoicos y San Agustín ya discutían la relación entre palabras, cosas e ideas. En 1690, John Locke llamó <em>semiotiké</em> a la doctrina de los signos.</li>
+            <li><strong>Un libro póstumo.</strong> El <cite>Curso de lingüística general</cite> (1916) fue editado por Charles Bally y Albert Sechehaye a partir de apuntes de los estudiantes de Saussure.</li>
+            <li><strong>Lengua y habla.</strong> Saussure distingue la <em>lengua</em> (el sistema social compartido) del <em>habla</em> (el uso individual y concreto).</li>
+            <li><strong>Representamen.</strong> En la terminología de Peirce, el signo perceptible se llama <em>representamen</em>; junto al objeto y al interpretante forma una relación de tres términos.</li>
+          </ul>
+          <p class="deepen__note">Ampliación: no forma parte del informe original.</p>
+        </aside>
+      </section>
+
+      <!-- ===== 04 ===== -->
+      <section class="section" id="autores" aria-labelledby="h-4">
+        <header class="section__head reveal">
+          <span class="section__num" aria-hidden="true">04</span>
+          <div>
+            <p class="section__kicker">Quién es quién</p>
+            <h2 class="section__title" id="h-4">¿Qué autores se relacionan con la tradición?</h2>
+          </div>
+        </header>
+
+        <ul class="authors reveal" aria-label="Autores y su principal contribución">
+          <li class="author-card">
+            <span class="author-card__mono" aria-hidden="true">FS</span>
+            <p class="author-card__meta">1857–1913 · Suiza</p>
+            <h3 class="author-card__name">Ferdinand de Saussure</h3>
+            <p class="author-card__contrib">Significante, significado y signo lingüístico.</p>
+            <button class="author-card__btn" type="button" data-author="saussure">Ver ficha <span aria-hidden="true">→</span></button>
+            <div class="author-card__details" id="ficha-saussure" hidden>
+              <dl class="ficha">
+                <div><dt>Fechas</dt><dd>1857–1913</dd></div>
+                <div><dt>Nacionalidad</dt><dd>Suiza</dd></div>
+                <div><dt>Disciplina</dt><dd>Lingüística</dd></div>
+                <div><dt>Obra clave</dt><dd><cite>Curso de lingüística general</cite> (1916, póstuma)</dd></div>
+                <div><dt>Aporte</dt><dd>Estudiar la lengua como un sistema de signos; base de la semiología.</dd></div>
+                <div><dt>Concepto estrella</dt><dd>Signo = significante + significado, unidos de forma arbitraria.</dd></div>
+              </dl>
+            </div>
+          </li>
+          <li class="author-card">
+            <span class="author-card__mono" aria-hidden="true">CP</span>
+            <p class="author-card__meta">1839–1914 · Estados Unidos</p>
+            <h3 class="author-card__name">Charles Sanders Peirce</h3>
+            <p class="author-card__contrib">Interpretación de los signos y clasificación en íconos, índices y símbolos.</p>
+            <button class="author-card__btn" type="button" data-author="peirce">Ver ficha <span aria-hidden="true">→</span></button>
+            <div class="author-card__details" id="ficha-peirce" hidden>
+              <dl class="ficha">
+                <div><dt>Fechas</dt><dd>1839–1914</dd></div>
+                <div><dt>Nacionalidad</dt><dd>Estadounidense</dd></div>
+                <div><dt>Disciplina</dt><dd>Filosofía y lógica</dd></div>
+                <div><dt>Obra clave</dt><dd><cite>Collected Papers</cite> (1931–1958, póstumos)</dd></div>
+                <div><dt>Aporte</dt><dd>Una teoría del signo basada en la interpretación y la lógica.</dd></div>
+                <div><dt>Concepto estrella</dt><dd>Tríada signo–objeto–interpretante; ícono, índice y símbolo; semiosis ilimitada.</dd></div>
+              </dl>
+            </div>
+          </li>
+          <li class="author-card author-card--accent">
+            <span class="author-card__mono" aria-hidden="true">RB</span>
+            <p class="author-card__meta">1915–1980 · Francia</p>
+            <h3 class="author-card__name">Roland Barthes</h3>
+            <p class="author-card__contrib">Denotación, connotación, mitos culturales y análisis de imágenes publicitarias.</p>
+            <button class="author-card__btn" type="button" data-author="barthes">Ver ficha <span aria-hidden="true">→</span></button>
+            <div class="author-card__details" id="ficha-barthes" hidden>
+              <dl class="ficha">
+                <div><dt>Fechas</dt><dd>1915–1980</dd></div>
+                <div><dt>Nacionalidad</dt><dd>Francesa</dd></div>
+                <div><dt>Disciplina</dt><dd>Semiología y crítica cultural</dd></div>
+                <div><dt>Obras clave</dt><dd><cite>Mitologías</cite> (1957); <cite>Retórica de la imagen</cite> (1964)</dd></div>
+                <div><dt>Aporte</dt><dd>En <cite>Retórica de la imagen</cite> analiza un anuncio de pastas Panzani y distingue tres mensajes: lingüístico, icónico denotado e icónico connotado.</dd></div>
+                <div><dt>Concepto estrella</dt><dd>El <strong>mito</strong>, que hace parecer natural lo que es cultural; el texto como <strong>anclaje</strong> o <strong>relevo</strong> de la imagen.</dd></div>
+              </dl>
+            </div>
+          </li>
+          <li class="author-card">
+            <span class="author-card__mono" aria-hidden="true">UE</span>
+            <p class="author-card__meta">1932–2016 · Italia</p>
+            <h3 class="author-card__name">Umberto Eco</h3>
+            <p class="author-card__contrib">Códigos culturales, interpretación y procesos de significación.</p>
+            <button class="author-card__btn" type="button" data-author="eco">Ver ficha <span aria-hidden="true">→</span></button>
+            <div class="author-card__details" id="ficha-eco" hidden>
+              <dl class="ficha">
+                <div><dt>Fechas</dt><dd>1932–2016</dd></div>
+                <div><dt>Nacionalidad</dt><dd>Italiana</dd></div>
+                <div><dt>Disciplina</dt><dd>Semiótica, filosofía y novela</dd></div>
+                <div><dt>Obras clave</dt><dd><cite>Obra abierta</cite> (1962); <cite>Tratado de semiótica general</cite> (1975); <cite>Lector in fabula</cite> (1979)</dd></div>
+                <div><dt>Aporte</dt><dd>Los códigos culturales permiten interpretar; el texto necesita un lector que coopere.</dd></div>
+                <div><dt>Concepto estrella</dt><dd>El <strong>lector modelo</strong> y la semiosis ilimitada.</dd></div>
+              </dl>
+            </div>
+          </li>
+          <li class="author-card">
+            <span class="author-card__mono" aria-hidden="true">LH</span>
+            <p class="author-card__meta">1899–1965 · Dinamarca</p>
+            <h3 class="author-card__name">Louis Hjelmslev</h3>
+            <p class="author-card__contrib">Desarrollo de la teoría del lenguaje y conceptos relacionados con la expresión y el contenido.</p>
+            <button class="author-card__btn" type="button" data-author="hjelmslev">Ver ficha <span aria-hidden="true">→</span></button>
+            <div class="author-card__details" id="ficha-hjelmslev" hidden>
+              <dl class="ficha">
+                <div><dt>Fechas</dt><dd>1899–1965</dd></div>
+                <div><dt>Nacionalidad</dt><dd>Danesa</dd></div>
+                <div><dt>Disciplina</dt><dd>Lingüística</dd></div>
+                <div><dt>Obra clave</dt><dd><cite>Prolegómenos a una teoría del lenguaje</cite> (1943)</dd></div>
+                <div><dt>Aporte</dt><dd>Divide el signo en plano de la <strong>expresión</strong> y plano del <strong>contenido</strong>, cada uno con forma y sustancia.</dd></div>
+                <div><dt>Concepto estrella</dt><dd>La semiótica connotativa, base de la noción de connotación que desarrolla Barthes.</dd></div>
+              </dl>
+            </div>
+          </li>
+          <li class="author-card author-card--note" aria-hidden="false">
+            <p class="author-card__meta">Conexión clave</p>
+            <p class="author-card__link-text">Hjelmslev <span aria-hidden="true">→</span> Barthes</p>
+            <p class="author-card__contrib">La idea de una semiótica <em>connotativa</em> de Hjelmslev es el punto de partida de la connotación en Barthes.</p>
+            <span class="badge">Para profundizar</span>
+          </li>
+        </ul>
+
+        <div class="prose">
+          <p>Estos autores aportan herramientas para analizar distintos tipos de comunicación. En conjunto, sus propuestas muestran que los significados se construyen mediante sistemas de signos y convenciones culturales.</p>
+          <p class="small-note">Las fichas amplían el contenido del informe con datos biográficos y obras de referencia.</p>
+        </div>
+      </section>
+
+      <!-- ===== 05 ===== -->
+      <section class="section" id="aportes" aria-labelledby="h-5">
+        <header class="section__head reveal">
+          <span class="section__num" aria-hidden="true">05</span>
+          <div>
+            <p class="section__kicker">Herramientas</p>
+            <h2 class="section__title" id="h-5">¿Cuáles son los principales aportes de la tradición semiótica?</h2>
+          </div>
+        </header>
+
+        <div class="accordion reveal" id="aportes-acc">
+          <div class="accordion__bar">
+            <p class="accordion__count">7 aportes</p>
+            <button type="button" class="text-btn" id="acc-toggle-all" aria-controls="aportes-acc">Abrir todos</button>
+          </div>
+          <div class="accordion__item">
+            <h3 class="accordion__heading"><button type="button" class="accordion__btn" aria-expanded="true" aria-controls="ap-1" id="ap-1-btn"><span class="accordion__n">01</span><span class="accordion__t">Comprensión de los signos</span><span class="accordion__icon" aria-hidden="true"></span></button></h3>
+            <div class="accordion__panel" id="ap-1" role="region" aria-labelledby="ap-1-btn"><p>Analiza cómo palabras, imágenes, gestos y objetos representan ideas.</p></div>
+          </div>
+          <div class="accordion__item">
+            <h3 class="accordion__heading"><button type="button" class="accordion__btn" aria-expanded="false" aria-controls="ap-2" id="ap-2-btn"><span class="accordion__n">02</span><span class="accordion__t">Significante y significado</span><span class="accordion__icon" aria-hidden="true"></span></button></h3>
+            <div class="accordion__panel" id="ap-2" role="region" aria-labelledby="ap-2-btn" hidden><p>Explica la relación entre la forma perceptible de un signo y el concepto que representa.</p></div>
+          </div>
+          <div class="accordion__item">
+            <h3 class="accordion__heading"><button type="button" class="accordion__btn" aria-expanded="false" aria-controls="ap-3" id="ap-3-btn"><span class="accordion__n">03</span><span class="accordion__t">Clasificación de los signos</span><span class="accordion__icon" aria-hidden="true"></span></button></h3>
+            <div class="accordion__panel" id="ap-3" role="region" aria-labelledby="ap-3-btn" hidden><p>Peirce distingue íconos, índices y símbolos (ver más abajo).</p></div>
+          </div>
+          <div class="accordion__item">
+            <h3 class="accordion__heading"><button type="button" class="accordion__btn" aria-expanded="false" aria-controls="ap-4" id="ap-4-btn"><span class="accordion__n">04</span><span class="accordion__t">Denotación y connotación</span><span class="accordion__icon" aria-hidden="true"></span></button></h3>
+            <div class="accordion__panel" id="ap-4" role="region" aria-labelledby="ap-4-btn" hidden><p>Diferencia lo que un mensaje muestra directamente de las asociaciones culturales que puede despertar.</p></div>
+          </div>
+          <div class="accordion__item">
+            <h3 class="accordion__heading"><button type="button" class="accordion__btn" aria-expanded="false" aria-controls="ap-5" id="ap-5-btn"><span class="accordion__n">05</span><span class="accordion__t">Análisis de la cultura</span><span class="accordion__icon" aria-hidden="true"></span></button></h3>
+            <div class="accordion__panel" id="ap-5" role="region" aria-labelledby="ap-5-btn" hidden><p>Permite estudiar cómo la publicidad, la moda, el cine y las redes sociales transmiten valores e identidades.</p></div>
+          </div>
+          <div class="accordion__item">
+            <h3 class="accordion__heading"><button type="button" class="accordion__btn" aria-expanded="false" aria-controls="ap-6" id="ap-6-btn"><span class="accordion__n">06</span><span class="accordion__t">Interpretación</span><span class="accordion__icon" aria-hidden="true"></span></button></h3>
+            <div class="accordion__panel" id="ap-6" role="region" aria-labelledby="ap-6-btn" hidden><p>Reconoce que las personas pueden comprender un mismo mensaje de maneras distintas según sus experiencias y contextos.</p></div>
+          </div>
+          <div class="accordion__item">
+            <h3 class="accordion__heading"><button type="button" class="accordion__btn" aria-expanded="false" aria-controls="ap-7" id="ap-7-btn"><span class="accordion__n">07</span><span class="accordion__t">Análisis crítico visual</span><span class="accordion__icon" aria-hidden="true"></span></button></h3>
+            <div class="accordion__panel" id="ap-7" role="region" aria-labelledby="ap-7-btn" hidden><p>Ayuda a identificar estereotipos, ideales sociales y valores presentes en las piezas publicitarias.</p></div>
+          </div>
+        </div>
+
+        <div class="prose">
+          <h3>Los tres tipos de signos según Peirce</h3>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs reveal" id="sign-tabs">
+          <div class="tabs__list" role="tablist" aria-label="Tipos de signo según Peirce">
+            <button class="tabs__tab" role="tab" type="button" id="tab-icono" aria-selected="true" aria-controls="panel-icono" tabindex="0"><span class="tabs__n">1</span>Ícono</button>
+            <button class="tabs__tab" role="tab" type="button" id="tab-indice" aria-selected="false" aria-controls="panel-indice" tabindex="-1"><span class="tabs__n">2</span>Índice</button>
+            <button class="tabs__tab" role="tab" type="button" id="tab-simbolo" aria-selected="false" aria-controls="panel-simbolo" tabindex="-1"><span class="tabs__n">3</span>Símbolo</button>
+          </div>
+
+          <div class="tabs__panel" role="tabpanel" id="panel-icono" aria-labelledby="tab-icono" tabindex="0">
+            <svg class="tabs__art" viewBox="0 0 200 160" aria-hidden="true">
+              <rect x="50" y="14" width="100" height="132" class="t-frame"/>
+              <ellipse cx="100" cy="72" rx="24" ry="30" class="t-line"/>
+              <path d="M66 140c4-26 18-36 34-36s30 10 34 36" class="t-line"/>
+              <circle cx="91" cy="68" r="2.5" class="t-fill"/><circle cx="109" cy="68" r="2.5" class="t-fill"/>
+              <path d="M92 84q8 6 16 0" class="t-line"/>
+            </svg>
+            <div>
+              <p class="tabs__kicker">Relación por <strong>semejanza</strong></p>
+              <h4 class="tabs__title"><a class="term" href="#g-icono" data-term="icono">Ícono</a></h4>
+              <p>Se relaciona con su objeto por semejanza, como un retrato.</p>
+              <p class="tabs__more">Otros ejemplos: un mapa, un emoji de cara sonriente, el pictograma de una impresora.</p>
+            </div>
+          </div>
+          <div class="tabs__panel" role="tabpanel" id="panel-indice" aria-labelledby="tab-indice" tabindex="0" hidden>
+            <svg class="tabs__art" viewBox="0 0 200 160" aria-hidden="true">
+              <path d="M100 20c-14 10 10 18-4 30s12 18-2 30" class="t-line t-smoke"/>
+              <path d="M120 30c-10 8 8 14-2 24" class="t-line t-smoke"/>
+              <path d="M100 146c-22 0-34-14-30-32 3-14 16-20 18-34 12 10 10 22 18 22 4 0 6-6 6-12 12 10 20 22 20 32 0 14-12 24-32 24Z" class="t-red"/>
+              <path d="M60 148h80" class="t-line"/>
+            </svg>
+            <div>
+              <p class="tabs__kicker">Relación por <strong>conexión</strong></p>
+              <h4 class="tabs__title"><a class="term" href="#g-indice" data-term="indice">Índice</a></h4>
+              <p>Mantiene una conexión indicativa con aquello que representa, como el humo que puede indicar fuego.</p>
+              <p class="tabs__more">Otros ejemplos: una huella en la arena, la fiebre como señal de infección, una veleta.</p>
+            </div>
+          </div>
+          <div class="tabs__panel" role="tabpanel" id="panel-simbolo" aria-labelledby="tab-simbolo" tabindex="0" hidden>
+            <svg class="tabs__art" viewBox="0 0 200 160" aria-hidden="true">
+              <path d="M56 14v136" class="t-line t-thick"/>
+              <rect x="58" y="20" width="96" height="64" class="t-frame"/>
+              <rect x="58" y="20" width="96" height="21.3" class="t-red"/>
+              <rect x="58" y="62.7" width="96" height="21.3" class="t-dark"/>
+              <path d="M40 150h32" class="t-line"/>
+            </svg>
+            <div>
+              <p class="tabs__kicker">Relación por <strong>convención</strong></p>
+              <h4 class="tabs__title"><a class="term" href="#g-simbolo" data-term="simbolo">Símbolo</a></h4>
+              <p>Depende de una convención compartida, como una bandera nacional.</p>
+              <p class="tabs__more">Otros ejemplos: las palabras, los números, el logotipo de una marca.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 06 ===== -->
+      <section class="section" id="caso-dove" aria-labelledby="h-6">
+        <header class="section__head reveal">
+          <span class="section__num" aria-hidden="true">06</span>
+          <div>
+            <p class="section__kicker">Estudio de caso</p>
+            <h2 class="section__title" id="h-6">Aplicación: campaña Dove por la Belleza Real</h2>
+          </div>
+        </header>
+
+        <div class="case-facts reveal">
+          <div><span class="case-facts__k">Marca</span><span class="case-facts__v">Dove</span></div>
+          <div><span class="case-facts__k">Inicio</span><span class="case-facts__v">2004</span></div>
+          <div><span class="case-facts__k">Pieza analizada</span><span class="case-facts__v">Real Beauty Sketches (2013)</span></div>
+          <div><span class="case-facts__k">Enfoque</span><span class="case-facts__v">Semiótica visual</span></div>
+        </div>
+
+        <div class="prose">
+          <p>La campaña Dove por la Belleza Real es una iniciativa publicitaria que busca cuestionar los ideales tradicionales de belleza y promover una representación más amplia de las mujeres. Comenzó en 2004 e incluye distintas piezas; una de las más conocidas es <cite>“Real Beauty Sketches”</cite>, publicada en 2013. El caso resulta útil para examinar la relación entre imágenes, mensajes verbales, valores culturales y construcción de significados.</p>
+
+          <h3>6.1. ¿Qué sucede en el caso?</h3>
+          <p>La campaña propone una visión de la belleza que cuestiona los modelos físicos tradicionales que aparecen con frecuencia en la publicidad. En diferentes piezas presenta mujeres con características físicas diversas y mensajes relacionados con la autoestima y la percepción personal. Así, la marca no comunica únicamente información sobre productos de cuidado personal, sino que también construye una narrativa relacionada con belleza, aceptación y diversidad.</p>
+
+          <h3>6.2. ¿Qué elementos pueden analizarse desde la tradición semiótica?</h3>
+        </div>
+
+        <dl class="elements reveal">
+          <div class="elements__item"><dt>Signos visuales</dt><dd>Las fotografías, los retratos, las expresiones faciales y las posturas corporales contribuyen a comunicar el mensaje. Mostrar distintos tipos de cuerpos puede cuestionar la idea de una sola apariencia ideal.</dd></div>
+          <div class="elements__item"><dt>Colores y composición</dt><dd>Los fondos, la tipografía, la disposición de las fotografías y la organización visual pueden transmitir sencillez, claridad y cercanía. Es necesario observar la pieza concreta, pues los recursos varían entre anuncios.</dd></div>
+          <div class="elements__item"><dt>Denotación</dt><dd>Lo que se identifica directamente: mujeres, rostros, retratos, textos publicitarios y elementos de marca.</dd></div>
+          <div class="elements__item"><dt>Connotación</dt><dd>Las asociaciones culturales o emocionales posibles: autoestima, aceptación personal, diversidad, belleza natural y cuestionamiento de estereotipos.</dd></div>
+          <div class="elements__item"><dt>Valores culturales</dt><dd>Desde Barthes, se puede examinar cómo la publicidad participa en la construcción de ideas culturales sobre la belleza y puede reforzarlas o cuestionarlas.</dd></div>
+          <div class="elements__item"><dt>Interpretación del receptor</dt><dd>Algunas personas pueden leer la campaña como una invitación a la aceptación personal; otras pueden analizar cómo una marca utiliza un discurso social para fortalecer su identidad comercial.</dd></div>
+        </dl>
+
+        <div class="prose">
+          <h3>6.3. La pieza: <cite>Real Beauty Sketches</cite> (2013)</h3>
+        </div>
+
+        <!-- Tarjeta de video -->
+        <figure class="video-card reveal">
+          <!-- EDITAR: para mostrar el video real, reemplaza el bloque <div class="video-card__poster">…</div>
+               por el código de inserción (iframe) copiado desde YouTube → Compartir → Insertar,
+               o por una imagen propia: <img src="img/dove.jpg" alt="Descripción de la pieza"> -->
+          <div class="video-card__poster">
+            <div class="video-card__frames" aria-hidden="true">
+              <span class="video-card__frame"></span>
+              <span class="video-card__frame video-card__frame--b"></span>
+            </div>
+            <div class="video-card__overlay">
+              <p class="video-card__label">Video · 2013 · aprox. 3 min</p>
+              <p class="video-card__title">Real Beauty Sketches</p>
+              <div class="video-card__actions">
+                <a class="btn btn--red" href="https://www.youtube.com/results?search_query=Dove+Real+Beauty+Sketches" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7Z"/></svg>
+                  Buscar el video en YouTube<span class="sr-only"> (se abre en una pestaña nueva)</span>
+                </a>
+                <a class="btn btn--ghost-light" href="https://www.dove.com/co/historias-dove/campanas.html" target="_blank" rel="noopener noreferrer">
+                  Sitio oficial de Dove<span class="sr-only"> (se abre en una pestaña nueva)</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <figcaption class="video-card__caption">
+            <p>La campaña Dove <cite>Real Beauty Sketches</cite> demuestra cómo la comunicación utiliza signos visuales y verbales para construir significados. A través de los retratos, las expresiones y los testimonios, la campaña propone una reflexión sobre la belleza y la percepción personal. Desde la tradición semiótica, podemos analizar cómo estos elementos transmiten valores culturales y cuestionan los estereotipos físicos presentes en la sociedad.</p>
+            <p class="small-note">El video y las imágenes de la campaña pertenecen a Dove / Unilever. Se enlazan desde sus canales oficiales con fines académicos.</p>
+          </figcaption>
+        </figure>
+
+        <aside class="deepen reveal" aria-labelledby="deepen-dove">
+          <p class="deepen__tag"><span aria-hidden="true">+</span> Para profundizar</p>
+          <h3 class="deepen__title" id="deepen-dove">¿Cómo funciona <cite>Real Beauty Sketches</cite>?</h3>
+          <p>La pieza fue creada por la agencia Ogilvy Brasil. Un dibujante forense, Gil Zamora (formado por el FBI), dibuja a cada mujer <strong>sin verla</strong>, dos veces: primero según la descripción que ella hace de sí misma y luego según la descripción de una persona desconocida que acababa de conocerla. Al final, los dos retratos se muestran lado a lado. El lema cierra la pieza: <em>“You are more beautiful than you think”</em> (“Eres más bella de lo que crees”). La campaña ganó el Titanium Grand Prix en Cannes Lions 2013.</p>
+          <p class="deepen__note">Ampliación: no forma parte del informe original.</p>
+        </aside>
+
+        <!-- Analizador con hotspots -->
+        <div class="analyzer reveal" id="analyzer">
+          <div class="analyzer__head">
+            <p class="analyzer__eyebrow">Analizador semiótico</p>
+            <h3 class="analyzer__title">Lee la pieza punto por punto</h3>
+            <p class="analyzer__intro">Esquema de la escena final del video. Pulsa cada número para ver su lectura según Peirce y Barthes.</p>
+          </div>
+          <div class="analyzer__grid">
+            <div class="analyzer__piece">
+              <svg class="analyzer__svg" viewBox="0 0 480 320" aria-hidden="true">
+                <rect width="480" height="320" class="a-bg"/>
+                <!-- retrato A: descrita por ella misma -->
+                <rect x="52" y="34" width="160" height="200" class="a-paper"/>
+                <g class="a-sketch a-sketch--hard">
+                  <path d="M132 70c-30 0-44 26-44 58 0 40 20 70 44 70s44-30 44-70c0-32-14-58-44-58Z"/>
+                  <path d="M88 118c4-34 22-52 44-52s40 18 44 52"/>
+                  <path d="M108 122h14M142 122h14"/>
+                  <path d="M104 116l18-4M142 112l18 4"/>
+                  <path d="M132 128v26l-6 4"/>
+                  <path d="M118 172q14-6 28 0"/>
+                  <path d="M100 150q4 8 2 18M164 150q-4 8-2 18"/>
+                  <path d="M120 100q12-6 24 0"/>
+                </g>
+                <text x="132" y="254" text-anchor="middle" class="a-cap">DESCRITA POR ELLA MISMA</text>
+                <!-- retrato B: descrita por otra persona -->
+                <rect x="268" y="34" width="160" height="200" class="a-paper"/>
+                <g class="a-sketch">
+                  <path d="M348 68c-32 0-46 28-46 60 0 38 22 70 46 70s46-32 46-70c0-32-14-60-46-60Z"/>
+                  <path d="M302 122c-6-40 16-62 46-62s52 22 46 62"/>
+                  <path d="M324 124q8-6 16 0M356 124q8-6 16 0"/>
+                  <path d="M348 132v20"/>
+                  <path d="M330 168q18 14 36 0"/>
+                </g>
+                <text x="348" y="254" text-anchor="middle" class="a-cap">DESCRITA POR OTRA PERSONA</text>
+                <!-- lema -->
+                <text x="240" y="292" text-anchor="middle" class="a-slogan">Eres más bella de lo que crees.</text>
+                <circle cx="446" cy="288" r="14" class="a-brand"/>
+                <text x="446" y="292" text-anchor="middle" class="a-brand-t">M</text>
+              </svg>
+              <button type="button" class="hotspot" style="left:50%;top:44%" data-hotspot="1" aria-pressed="false" aria-controls="hs-panel"><span class="sr-only">Punto </span>1<span class="sr-only">: dos retratos</span></button>
+              <button type="button" class="hotspot" style="left:27.5%;top:12%" data-hotspot="2" aria-pressed="false" aria-controls="hs-panel"><span class="sr-only">Punto </span>2<span class="sr-only">: el contraste entre retratos</span></button>
+              <button type="button" class="hotspot" style="left:27.5%;top:55%" data-hotspot="3" aria-pressed="false" aria-controls="hs-panel"><span class="sr-only">Punto </span>3<span class="sr-only">: el gesto y la expresión</span></button>
+              <button type="button" class="hotspot" style="left:10%;top:91%" data-hotspot="4" aria-pressed="false" aria-controls="hs-panel"><span class="sr-only">Punto </span>4<span class="sr-only">: el lema</span></button>
+              <button type="button" class="hotspot" style="left:93%;top:79%" data-hotspot="5" aria-pressed="false" aria-controls="hs-panel"><span class="sr-only">Punto </span>5<span class="sr-only">: la marca</span></button>
+              <button type="button" class="hotspot" style="left:72.5%;top:12%" data-hotspot="6" aria-pressed="false" aria-controls="hs-panel"><span class="sr-only">Punto </span>6<span class="sr-only">: la belleza real como mito</span></button>
+            </div>
+            <div class="analyzer__panel" id="hs-panel" aria-live="polite">
+              <div class="hs-content" data-hs="0">
+                <p class="hs-content__tag">Instrucciones</p>
+                <p class="hs-content__title">Selecciona un punto</p>
+                <p>Cada número señala un elemento de la pieza. Verás qué concepto semiótico lo explica.</p>
+              </div>
+              <div class="hs-content" data-hs="1" hidden>
+                <p class="hs-content__tag">Denotación · Ícono</p>
+                <p class="hs-content__title">Dos retratos de la misma mujer</p>
+                <p>Lo que se ve, sin interpretar: dos dibujos a lápiz de un mismo rostro. Cada retrato es un <strong>ícono</strong>, porque representa a la mujer por semejanza.</p>
+              </div>
+              <div class="hs-content" data-hs="2" hidden>
+                <p class="hs-content__tag">Connotación · Índice</p>
+                <p class="hs-content__title">El retrato “según ella”</p>
+                <p>El retrato hecho con su propia descripción es un <strong>índice</strong> de su autopercepción: deja huella de cómo se ve a sí misma. Connota autocrítica y baja autoestima frente al retrato más amable del desconocido.</p>
+              </div>
+              <div class="hs-content" data-hs="3" hidden>
+                <p class="hs-content__tag">Índice</p>
+                <p class="hs-content__title">Gestos y lágrimas</p>
+                <p>En el video, las expresiones faciales, los silencios y las lágrimas de las participantes funcionan como <strong>índices</strong> de emoción: son efectos visibles de lo que sienten al comparar los retratos.</p>
+              </div>
+              <div class="hs-content" data-hs="4" hidden>
+                <p class="hs-content__tag">Anclaje (Barthes)</p>
+                <p class="hs-content__title">“Eres más bella de lo que crees”</p>
+                <p>El lema fija una única lectura de las imágenes entre muchas posibles: eso es el <strong><a class="term" href="#g-anclaje" data-term="anclaje">anclaje</a></strong>. Sin el texto, los retratos podrían leerse como un experimento forense; con él, se leen como un mensaje sobre autoestima.</p>
+              </div>
+              <div class="hs-content" data-hs="5" hidden>
+                <p class="hs-content__tag">Símbolo</p>
+                <p class="hs-content__title">La marca</p>
+                <p>El logotipo es un <strong>símbolo</strong>: su significado depende de una convención. Al final de la pieza, todo el relato emocional queda asociado a la marca. <em>(En este esquema, la marca se representa con un círculo genérico.)</em></p>
+              </div>
+              <div class="hs-content" data-hs="6" hidden>
+                <p class="hs-content__tag">Mito (Barthes)</p>
+                <p class="hs-content__title">La “belleza real”</p>
+                <p>La pieza presenta la “belleza real” como un valor natural y evidente. Barthes llamaría <strong><a class="term" href="#g-mito" data-term="mito">mito</a></strong> a esta operación: un sentido cultural que parece natural y que la marca convierte en parte de su identidad.</p>
+              </div>
+            </div>
+          </div>
+          <p class="analyzer__note">Lectura peirceana y barthesiana: ampliación del análisis del informe.</p>
+        </div>
+
+        <!-- Lectura crítica -->
+        <aside class="critical reveal" aria-labelledby="critical-title">
+          <p class="critical__tag">Lectura crítica</p>
+          <h3 class="critical__title" id="critical-title">¿Quién habla cuando la marca habla de belleza?</h3>
+          <div class="critical__cols">
+            <p>Como señala el informe, algunas personas leen la campaña como una invitación a la aceptación personal; otras analizan cómo una marca utiliza un discurso social para fortalecer su identidad comercial. Ambas lecturas son posibles porque el significado depende del receptor y de su contexto.</p>
+            <p>En la prensa se señalaron dos tensiones: las participantes de <cite>Real Beauty Sketches</cite> eran mayoritariamente jóvenes, blancas y delgadas, lo que contradice el discurso de diversidad; además, Unilever, la empresa dueña de Dove, comercializa otras marcas con mensajes opuestos sobre el cuerpo. <span class="badge badge--dark">Para profundizar</span></p>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ===== 07 ===== -->
+      <section class="section" id="infografia" aria-labelledby="h-7">
+        <header class="section__head reveal">
+          <span class="section__num" aria-hidden="true">07</span>
+          <div>
+            <p class="section__kicker">Pieza gráfica</p>
+            <h2 class="section__title" id="h-7">Presentación gráfica de la tradición</h2>
+          </div>
+        </header>
+
+        <div class="prose">
+          <p>La actividad también solicita una representación gráfica de la tradición. Para ello se diseñó la infografía <strong>“La tradición semiótica: el significado detrás de los signos”</strong>, cuyo objetivo es resumir los conceptos investigados de forma visual y fácil de recorrer.</p>
+        </div>
+
+        <div class="infographic reveal">
+          <a class="infographic__preview" href="infografia.html" aria-label="Abrir la infografía completa">
+            <span class="ig">
+              <span class="ig__top">
+                <span class="ig__kicker">Infografía</span>
+                <span class="ig__title">La tradición <b>semiótica</b></span>
+                <span class="ig__sub">el significado detrás de los signos</span>
+              </span>
+              <span class="ig__q">¿Cómo se produce y se interpreta el significado?</span>
+              <svg class="ig__tri" viewBox="0 0 120 100" aria-hidden="true">
+                <path d="M14 88 L60 14 L106 88" fill="none" stroke="#F4F1EC" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M14 88 H106" fill="none" stroke="#F4F1EC" stroke-width="2.5" stroke-dasharray="4 5"/>
+                <circle cx="60" cy="14" r="8" fill="#FF3B4E"/>
+                <circle cx="14" cy="88" r="5" fill="#0E0E0E" stroke="#F4F1EC" stroke-width="2"/>
+                <circle cx="106" cy="88" r="5" fill="#0E0E0E" stroke="#F4F1EC" stroke-width="2"/>
+              </svg>
+              <span class="ig__chips">
+                <span>significante</span><span>significado</span><span>denotación</span><span>connotación</span><span>interpretación</span>
+              </span>
+              <span class="ig__authors">
+                <span>FS</span><span>CP</span><span>RB</span><span>UE</span><span>LH</span>
+              </span>
+              <span class="ig__foot">1080 × 1920</span>
+            </span>
+          </a>
+
+          <div class="infographic__info">
+            <h3>Contenido de la infografía</h3>
+            <dl class="ig-list">
+              <div><dt>Título</dt><dd>La tradición semiótica: el significado detrás de los signos.</dd></div>
+              <div><dt>Pregunta central</dt><dd>¿Cómo se produce y se interpreta el significado a través de los signos?</dd></div>
+              <div><dt>Signos</dt><dd>Palabras, imágenes, símbolos y gestos.</dd></div>
+              <div><dt>Conceptos</dt><dd>Significante, significado, denotación, connotación e interpretación.</dd></div>
+              <div><dt>Autores</dt><dd>Saussure, Peirce, Barthes, Eco y Hjelmslev.</dd></div>
+              <div><dt>Aplicaciones</dt><dd>Publicidad, fotografía, redes sociales, moda y comunicación cotidiana.</dd></div>
+            </dl>
+            <a class="btn btn--black" href="infografia.html">Ver infografía <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <div class="prose">
+          <h3>Decisiones de diseño</h3>
+        </div>
+        <ul class="decisions reveal">
+          <li><span class="decisions__k">Formato</span>Vertical, de 1080 × 1920 píxeles, pensado para pantallas móviles y redes sociales.</li>
+          <li><span class="decisions__k">Paleta</span>Rojo, negro y blanco. El informe sugería azul oscuro y blanco con colores complementarios; se optó por una paleta de tres colores con el rojo como acento, para que el color también signifique (ver la sección siguiente).</li>
+          <li><span class="decisions__k">Tipografía</span>Clara y legible: Montserrat para títulos e Inter para textos.</li>
+          <li><span class="decisions__k">Composición</span>Título en la parte superior, conceptos en el centro, y autores y aplicaciones en la parte inferior.</li>
+          <li><span class="decisions__k">Recursos visuales</span>Íconos, flechas, ejemplos y diagramas.</li>
+          <li><span class="decisions__k">Síntesis</span>Poco texto: la infografía resume el informe, no lo reproduce completo.</li>
+        </ul>
+      </section>
+
+      <!-- ===== ESTE BLOG ES UN SIGNO ===== -->
+      <section class="section section--inverse" id="este-blog" aria-labelledby="h-blog">
+        <div class="inverse reveal">
+          <p class="inverse__kicker">Interludio</p>
+          <h2 class="inverse__title" id="h-blog">Este blog también es un signo<span class="red-dot">.</span></h2>
+          <p class="inverse__lead">Si cada decisión gráfica influye en la interpretación, este diseño también puede leerse semióticamente. Su paleta usa la regla 60-30-10: 60 % blanco, 30 % negro y 10 % rojo.</p>
+
+          <div class="ratio" aria-hidden="true">
+            <span class="ratio__w">60</span><span class="ratio__b">30</span><span class="ratio__r">10</span>
+          </div>
+
+          <ul class="swatches">
+            <li class="swatch">
+              <span class="swatch__chip swatch__chip--red" aria-hidden="true"></span>
+              <p class="swatch__name">Rojo <code>#D7182A</code></p>
+              <p><b>Denotación:</b> un color.</p>
+              <p><b>Connotación:</b> pasión, alerta, atención, importancia. Es un código cultural: la señal de “pare” o el corazón rojo de la sección 01. Aquí marca lo que significa: números, conceptos clave y estados activos.</p>
+            </li>
+            <li class="swatch">
+              <span class="swatch__chip swatch__chip--black" aria-hidden="true"></span>
+              <p class="swatch__name">Negro <code>#0E0E0E</code></p>
+              <p><b>Denotación:</b> ausencia de luz.</p>
+              <p><b>Connotación:</b> seriedad, autoridad, elegancia; lo editorial e impreso. Es la estructura: texto y retícula.</p>
+            </li>
+            <li class="swatch">
+              <span class="swatch__chip swatch__chip--white" aria-hidden="true"></span>
+              <p class="swatch__name">Blanco <code>#FAF8F5</code></p>
+              <p><b>Denotación:</b> el fondo, el papel.</p>
+              <p><b>Connotación:</b> claridad, neutralidad, espacio para pensar. Es la respiración de la página.</p>
+            </li>
+          </ul>
+
+          <div class="type-specimen">
+            <p class="type-specimen__item"><span class="ts-montserrat">Aa</span><span><b>Montserrat</b> · titulares. Geométrica y firme: modernidad, estructura.</span></p>
+            <p class="type-specimen__item"><span class="ts-inter">Aa</span><span><b>Inter</b> · texto. Neutra y legible: claridad, función.</span></p>
+            <p class="type-specimen__item"><span class="ts-playfair">Aa</span><span><b>Playfair Display</b> · citas. Clásica y cursiva: voz humanista, tradición literaria.</span></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 08 ===== -->
+      <section class="section" id="analisis" aria-labelledby="h-8">
+        <header class="section__head reveal">
+          <span class="section__num" aria-hidden="true">08</span>
+          <div>
+            <p class="section__kicker">Síntesis</p>
+            <h2 class="section__title" id="h-8">Análisis final</h2>
+          </div>
+        </header>
+        <div class="prose">
+          <p>La tradición semiótica es fundamental para comprender cómo se construyen los significados en la comunicación. Su principal aporte consiste en mostrar que los mensajes no dependen únicamente de las palabras: las imágenes, los colores, los gestos y los símbolos también participan en la construcción de sentido.</p>
+          <p>El análisis de la campaña Dove permite observar esta idea en una situación concreta. Las fotografías, las expresiones faciales, los testimonios y los textos publicitarios trabajan conjuntamente para construir una propuesta sobre la belleza y la percepción personal. Sin embargo, un análisis crítico también debe considerar que la publicidad busca fortalecer la identidad de una marca y relacionarse con sus consumidores, además de comunicar valores sociales.</p>
+        </div>
+        <blockquote class="pullquote pullquote--small reveal">
+          <p>Cada decisión gráfica puede influir en la interpretación de un mensaje.</p>
+        </blockquote>
+        <div class="prose">
+          <p>Desde el diseño visual, esta tradición es especialmente relevante porque cada decisión gráfica puede influir en la interpretación de un mensaje. La selección de colores, la tipografía, la composición, la fotografía y la representación de las personas contribuyen a comunicar una idea. Estudiar semiótica permite desarrollar una mirada crítica frente a los medios y crear piezas visuales con mayor intención y responsabilidad.</p>
+        </div>
+      </section>
+
+      <!-- ===== QUIZ ===== -->
+      <section class="section" id="quiz" aria-labelledby="h-quiz">
+        <header class="section__head reveal">
+          <span class="section__num" aria-hidden="true">Q</span>
+          <div>
+            <p class="section__kicker">Ponte a prueba</p>
+            <h2 class="section__title" id="h-quiz">Autoevaluación</h2>
+          </div>
+        </header>
+        <p class="prose-lead">Seis preguntas para comprobar lo aprendido. Recibirás retroalimentación al responder cada una.</p>
+
+        <form class="quiz" id="quiz-form" novalidate>
+          <fieldset class="quiz__q" data-answer="b">
+            <legend><span class="quiz__n">1/6</span>En el modelo de Saussure, la palabra escrita o el sonido “árbol” es el…</legend>
+            <label><input type="radio" name="q1" value="a"> <span>Significado</span></label>
+            <label><input type="radio" name="q1" value="b"> <span>Significante</span></label>
+            <label><input type="radio" name="q1" value="c"> <span>Interpretante</span></label>
+            <p class="quiz__fb" aria-live="polite" data-ok="Correcto: el significante es la forma perceptible del signo." data-ko="No exactamente. La forma perceptible (sonido o escritura) es el significante; el significado es el concepto."></p>
+          </fieldset>
+          <fieldset class="quiz__q" data-answer="b">
+            <legend><span class="quiz__n">2/6</span>Según Peirce, el humo que indica fuego es un…</legend>
+            <label><input type="radio" name="q2" value="a"> <span>Ícono</span></label>
+            <label><input type="radio" name="q2" value="b"> <span>Índice</span></label>
+            <label><input type="radio" name="q2" value="c"> <span>Símbolo</span></label>
+            <p class="quiz__fb" aria-live="polite" data-ok="Correcto: el índice mantiene una conexión indicativa con lo que representa." data-ko="Revisa los tipos de signo: el humo no se parece al fuego ni es una convención; está conectado con él. Es un índice."></p>
+          </fieldset>
+          <fieldset class="quiz__q" data-answer="c">
+            <legend><span class="quiz__n">3/6</span>Una bandera nacional es un símbolo porque…</legend>
+            <label><input type="radio" name="q3" value="a"> <span>Se parece físicamente al país</span></label>
+            <label><input type="radio" name="q3" value="b"> <span>Es un efecto causado por el país</span></label>
+            <label><input type="radio" name="q3" value="c"> <span>Depende de una convención compartida</span></label>
+            <p class="quiz__fb" aria-live="polite" data-ok="Correcto: el símbolo funciona por convención." data-ko="No. El símbolo depende de una convención compartida: sin ese acuerdo, la bandera sería solo tela de colores."></p>
+          </fieldset>
+          <fieldset class="quiz__q" data-answer="a">
+            <legend><span class="quiz__n">4/6</span>En el caso Dove, identificar “mujeres, rostros, retratos y textos” corresponde a la…</legend>
+            <label><input type="radio" name="q4" value="a"> <span>Denotación</span></label>
+            <label><input type="radio" name="q4" value="b"> <span>Connotación</span></label>
+            <label><input type="radio" name="q4" value="c"> <span>Semiosis ilimitada</span></label>
+            <p class="quiz__fb" aria-live="polite" data-ok="Correcto: la denotación es lo que se identifica directamente." data-ko="No. Describir lo que aparece, sin interpretarlo, es la denotación; la connotación son las asociaciones (autoestima, diversidad…)."></p>
+          </fieldset>
+          <fieldset class="quiz__q" data-answer="c">
+            <legend><span class="quiz__n">5/6</span>¿Qué autor trabajó la denotación, la connotación y los mitos culturales en imágenes publicitarias?</legend>
+            <label><input type="radio" name="q5" value="a"> <span>Louis Hjelmslev</span></label>
+            <label><input type="radio" name="q5" value="b"> <span>Umberto Eco</span></label>
+            <label><input type="radio" name="q5" value="c"> <span>Roland Barthes</span></label>
+            <p class="quiz__fb" aria-live="polite" data-ok="Correcto: Roland Barthes, autor de Mitologías y Retórica de la imagen." data-ko="No. Es Roland Barthes. Hjelmslev trabajó expresión y contenido; Eco, códigos culturales e interpretación."></p>
+          </fieldset>
+          <fieldset class="quiz__q" data-answer="b">
+            <legend><span class="quiz__n">6/6</span>¿Cuál es la pregunta central de la tradición semiótica?</legend>
+            <label><input type="radio" name="q6" value="a"> <span>¿Cómo se transmite información sin ruido de un emisor a un receptor?</span></label>
+            <label><input type="radio" name="q6" value="b"> <span>¿Cómo se produce y se interpreta el significado a través de los signos?</span></label>
+            <label><input type="radio" name="q6" value="c"> <span>¿Cómo influyen los medios en la opinión pública?</span></label>
+            <p class="quiz__fb" aria-live="polite" data-ok="Correcto: es la pregunta que guía toda la tradición." data-ko="No. La primera pregunta es más propia de la tradición cibernética; la tercera, de la sociopsicológica. La semiótica pregunta por el significado."></p>
+          </fieldset>
+
+          <div class="quiz__result" id="quiz-result" aria-live="polite">
+            <p class="quiz__score"><span id="quiz-score">0</span><span class="quiz__total">/6</span></p>
+            <p class="quiz__msg" id="quiz-msg">Responde las preguntas para ver tu puntaje.</p>
+            <button type="reset" class="btn btn--black" id="quiz-reset">Reiniciar</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- ===== 09 ===== -->
+      <section class="section" id="conclusion" aria-labelledby="h-9">
+        <header class="section__head reveal">
+          <span class="section__num" aria-hidden="true">09</span>
+          <div>
+            <p class="section__kicker">Cierre</p>
+            <h2 class="section__title" id="h-9">Conclusión</h2>
+          </div>
+        </header>
+        <div class="prose prose--conclusion">
+          <p>La tradición semiótica nos permite comprender que la comunicación va más allá de las palabras, porque las imágenes, los colores, los gestos y los símbolos también transmiten significados. A través de los aportes de autores como Ferdinand de Saussure, Charles Sanders Peirce y Roland Barthes, podemos analizar cómo se construyen e interpretan los mensajes dentro de diferentes contextos culturales.</p>
+          <p>El análisis de la campaña Dove por la Belleza Real demuestra que la publicidad no solo promociona productos, sino que también comunica valores, cuestiona estereotipos y propone formas particulares de entender la sociedad. En el diseño visual, la semiótica es una herramienta fundamental porque ayuda a reconocer que cada elemento gráfico influye en la manera en que un mensaje es percibido.</p>
+        </div>
+      </section>
+
+      <!-- ===== GLOSARIO ===== -->
+      <section class="section" id="glosario" aria-labelledby="h-g">
+        <header class="section__head reveal">
+          <span class="section__num" aria-hidden="true">G</span>
+          <div>
+            <p class="section__kicker">Vocabulario</p>
+            <h2 class="section__title" id="h-g">Glosario</h2>
+          </div>
+        </header>
+        <dl class="glossary reveal">
+          <div id="g-signo" data-glossary="signo"><dt>Signo</dt><dd>Todo aquello que está en lugar de otra cosa y produce un significado: una palabra, una imagen, un gesto, un color.</dd></div>
+          <div id="g-significante" data-glossary="significante"><dt>Significante</dt><dd>La forma perceptible del signo: el sonido, la escritura o la imagen (Saussure).</dd></div>
+          <div id="g-significado" data-glossary="significado"><dt>Significado</dt><dd>El concepto o idea mental asociada a un significante (Saussure).</dd></div>
+          <div id="g-denotacion" data-glossary="denotacion"><dt>Denotación</dt><dd>Lo que un mensaje muestra directamente; su descripción literal.</dd></div>
+          <div id="g-connotacion" data-glossary="connotacion"><dt>Connotación</dt><dd>Las asociaciones culturales o emocionales que un signo despierta además de su sentido literal.</dd></div>
+          <div id="g-icono" data-glossary="icono"><dt>Ícono</dt><dd>Signo que se relaciona con su objeto por semejanza, como un retrato (Peirce).</dd></div>
+          <div id="g-indice" data-glossary="indice"><dt>Índice</dt><dd>Signo con una conexión física o causal con lo que representa, como el humo y el fuego (Peirce).</dd></div>
+          <div id="g-simbolo" data-glossary="simbolo"><dt>Símbolo</dt><dd>Signo que funciona por convención compartida, como una bandera (Peirce).</dd></div>
+          <div id="g-interpretante" data-glossary="interpretante"><dt>Interpretante</dt><dd>El efecto o idea que un signo produce en la mente de quien lo interpreta (Peirce).</dd></div>
+          <div id="g-anclaje" data-glossary="anclaje"><dt>Anclaje</dt><dd>Función del texto que fija una lectura de la imagen entre varias posibles (Barthes).</dd></div>
+          <div id="g-mito" data-glossary="mito"><dt>Mito</dt><dd>Sentido cultural que se presenta como natural y evidente (Barthes).</dd></div>
+          <div id="g-codigo" data-glossary="codigo"><dt>Código</dt><dd>Conjunto de convenciones compartidas que permite producir e interpretar mensajes (Eco).</dd></div>
+        </dl>
+      </section>
+
+      <!-- ===== 10 ===== -->
+      <section class="section" id="fuentes" aria-labelledby="h-10">
+        <header class="section__head reveal">
+          <span class="section__num" aria-hidden="true">10</span>
+          <div>
+            <p class="section__kicker">Referencias</p>
+            <h2 class="section__title" id="h-10">Fuentes de consulta</h2>
+          </div>
+        </header>
+
+        <h3 class="refs__head">Fuentes web</h3>
+        <ol class="refs">
+          <li class="ref"><p class="ref__text">Dove. (s. f.). <i>Campañas</i>. Dove Colombia. https://www.dove.com/co/historias-dove/campanas.html</p><button type="button" class="ref__copy">Copiar cita</button></li>
+          <li class="ref"><p class="ref__text">Unilever. (s. f.). <i>Our history and archives: 1980–2010</i>. https://www.unilever.com/our-company/our-history-and-archives/1980-2010/</p><button type="button" class="ref__copy">Copiar cita</button></li>
+          <li class="ref"><p class="ref__text">Writing Commons. (s. f.). <i>Semiotics: Sign, signifier, signified</i>. https://writingcommons.org/section/literacy/semiotics-sign-signifier-signified/</p><button type="button" class="ref__copy">Copiar cita</button></li>
+          <!-- EDITAR: completar autor(es), año y título exacto del artículo de Estudos Semióticos -->
+          <li class="ref"><p class="ref__text">Estudos Semióticos. (s. f.). <i>Revista académica de estudios semióticos</i>. Universidade de São Paulo. https://revistas.usp.br/esse/en/article/view/172681</p><button type="button" class="ref__copy">Copiar cita</button></li>
+        </ol>
+
+        <h3 class="refs__head">Bibliografía académica <span class="badge">Para profundizar</span></h3>
+        <ol class="refs">
+          <li class="ref"><p class="ref__text">Barthes, R. (1957). <i>Mythologies</i>. Éditions du Seuil.</p><button type="button" class="ref__copy">Copiar cita</button></li>
+          <li class="ref"><p class="ref__text">Barthes, R. (1964). Rhétorique de l’image. <i>Communications, 4</i>, 40–51.</p><button type="button" class="ref__copy">Copiar cita</button></li>
+          <li class="ref"><p class="ref__text">Craig, R. T. (1999). Communication theory as a field. <i>Communication Theory, 9</i>(2), 119–161. https://doi.org/10.1111/j.1468-2885.1999.tb00355.x</p><button type="button" class="ref__copy">Copiar cita</button></li>
+          <li class="ref"><p class="ref__text">Eco, U. (1975). <i>Trattato di semiotica generale</i>. Bompiani.</p><button type="button" class="ref__copy">Copiar cita</button></li>
+          <li class="ref"><p class="ref__text">Hjelmslev, L. (1943). <i>Omkring sprogteoriens grundlæggelse</i> [Prolegómenos a una teoría del lenguaje]. Munksgaard.</p><button type="button" class="ref__copy">Copiar cita</button></li>
+          <li class="ref"><p class="ref__text">Peirce, C. S. (1931–1958). <i>Collected papers of Charles Sanders Peirce</i> (Vols. 1–8; C. Hartshorne, P. Weiss y A. W. Burks, Eds.). Harvard University Press.</p><button type="button" class="ref__copy">Copiar cita</button></li>
+          <li class="ref"><p class="ref__text">Saussure, F. de. (1945). <i>Curso de lingüística general</i> (A. Alonso, Trad.). Losada. (Obra original publicada en 1916)</p><button type="button" class="ref__copy">Copiar cita</button></li>
+        </ol>
+
+        <aside class="note-box">
+          <h3>Nota sobre las fuentes y el uso de imágenes</h3>
+          <p>Las referencias siguen el formato APA (7.ª edición). El video y las imágenes de la campaña Dove pertenecen a sus propietarios y se citan o enlazan desde sus canales oficiales únicamente con fines académicos; los diagramas y esquemas de este blog son de elaboración propia.</p>
+        </aside>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <p class="logo logo--light">Semiótica<span class="logo__dot">.</span></p>
+        <p class="site-footer__tag">La tradición semiótica en la comunicación — blog académico.</p>
+      </div>
+      <dl class="site-footer__meta">
+        <div><dt>Autora</dt><dd><!-- EDITAR: nombre de la estudiante -->Nombre de la estudiante</dd></div>
+        <div><dt>Asignatura</dt><dd><!-- EDITAR: asignatura -->Nombre de la asignatura</dd></div>
+        <div><dt>Docente</dt><dd><!-- EDITAR: docente -->Nombre del docente</dd></div>
+        <div><dt>Fecha</dt><dd><!-- EDITAR: fecha -->Fecha de entrega</dd></div>
+      </dl>
+      <p class="site-footer__legal">Contenido con fines académicos. Las marcas, videos e imágenes de terceros pertenecen a sus respectivos propietarios. Diagramas, esquemas e infografía: elaboración propia.</p>
+    </div>
+  </footer>
+
+  <!-- Flotantes -->
+  <button class="fab fab--toc" type="button" id="toc-btn" aria-controls="toc" aria-expanded="false">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h13"/></svg>
+    Índice
+  </button>
+  <button class="fab fab--top" type="button" id="top-btn" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Modal de autores -->
+  <dialog class="modal" id="author-modal" aria-labelledby="modal-title">
+    <div class="modal__box">
+      <button class="icon-btn modal__close" type="button" id="modal-close" aria-label="Cerrar ficha">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+      <p class="modal__kicker">Ficha de autor <span class="badge">Para profundizar</span></p>
+      <h2 class="modal__title" id="modal-title">Autor</h2>
+      <div class="modal__body" id="modal-body"></div>
+    </div>
+  </dialog>
+
+  <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
