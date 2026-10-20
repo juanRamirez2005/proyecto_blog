@@ -1164,6 +1164,52 @@ code { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-siz
 .note-box h3 { font-size: 1rem; font-weight: 800; margin-bottom: 8px; }
 .note-box p { font-size: .98rem; color: var(--fg-2); }
 
+/* 5.22b Créditos */
+.credits {
+  list-style: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1px;
+  background: var(--strong);
+  border: 1px solid var(--strong);
+}
+.credit-card {
+  background: var(--bg);
+  padding: 32px 24px 28px;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  transition: background-color var(--dur) ease;
+}
+.credit-card:hover { background: var(--surface); }
+.credit-card__photo {
+  display: block;
+  width: 148px; height: 148px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--strong);
+  box-shadow: 6px 6px 0 var(--accent);
+  margin-bottom: 22px;
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.credit-card:hover .credit-card__photo { transform: translate(-3px, -3px); box-shadow: 9px 9px 0 var(--accent); }
+.credit-card__photo img { width: 100%; height: 100%; object-fit: cover; }
+/* Encuadre manual: acerca la cara en fotos donde la persona sale de cuerpo entero */
+.credit-card__photo--zoom { position: relative; }
+.credit-card__photo--zoom img {
+  position: absolute;
+  max-width: none; width: 214%; height: auto; aspect-ratio: 3 / 4;
+  left: -68%; top: -30%;
+}
+.credit-card__name { font-size: 1.35rem; font-weight: 800; margin-bottom: 10px; }
+.credit-card__link {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 44px;
+  font-family: var(--f-display); font-weight: 700; font-size: .8125rem; letter-spacing: .04em;
+  text-decoration: none; color: var(--fg-2);
+  border-bottom: 2px solid var(--accent);
+}
+.credit-card__link:hover { color: var(--accent-text); }
+.credit-card__link svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
 /* 5.23 Footer */
 .site-footer { background: var(--inv-bg); color: var(--inv-fg); border-top: 6px solid var(--accent); }
 .site-footer__inner { max-width: var(--container); margin: 0 auto; padding: 56px var(--gutter) 40px; display: grid; gap: 32px; }
@@ -1298,6 +1344,7 @@ code { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-siz
   .heart-lab { grid-template-columns: 1fr 1fr; }
   .diagram { grid-template-columns: 1.05fr 1fr; }
   .elements { grid-template-columns: 1fr 1fr; }
+  .credits { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .case-facts { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .critical__cols { grid-template-columns: 1fr 1fr; gap: 40px; }
   .infographic { grid-template-columns: 300px 1fr; gap: 56px; }
@@ -1367,7 +1414,7 @@ code { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-siz
   .hero-svg__tri, .hero-svg__base, .hero-svg__node, .hero-svg__label, .hero-svg__big { stroke: #000; }
   .hero-svg__label, .hero-svg__big { fill: #000; stroke: none; }
   .section { padding-top: 28pt; }
-  .section__head, figure, .deepen, .critical, .author-card, .quiz__q, .ref, .analyzer { break-inside: avoid; }
+  .section__head, figure, .deepen, .critical, .author-card, .credit-card, .quiz__q, .ref, .analyzer { break-inside: avoid; }
   h2, h3 { break-after: avoid; }
   .accordion__panel[hidden], .tabs__panel[hidden], .diagram__content[hidden], .hs-content[hidden], .author-card__details[hidden] { display: block !important; }
   .tabs__list { display: none; }

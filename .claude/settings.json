@@ -43,7 +43,17 @@
       "Bash(grep -oiE '<h1[^>]*>.{0,200}' d.html)",
       "Bash(curl -sL -A \"Mozilla/5.0\" https://writingcommons.org/section/literacy/semiotics-sign-signifier-signified/)",
       "Bash(grep -oiE '\"author\"[^}]{0,200}|article:\\(published|modified\\)_time\" content=\"[^\"]*\"|name=\"author\" content=\"[^\"]*\"|datePublished\":\"[^\"]*\"|dateModified\":\"[^\"]*\"' w.html)",
-      "Bash(grep -oiE '\\(Moxley|author|datePublished|dateModified|published\\)[^<]{0,120}' w.html)"
+      "Bash(grep -oiE '\\(Moxley|author|datePublished|dateModified|published\\)[^<]{0,120}' w.html)",
+      "Bash(cat)",
+      "Bash('/c/Program Files \\(x86\\)/Microsoft/Edge/Application/msedge.exe' --headless=new --disable-gpu --hide-scrollbars --virtual-time-budget=4000 --blink-settings=preferredColorScheme=1 --allow-file-access-from-files --window-size=2000,1800 --screenshot=C:/Users/User/AppData/Local/Temp/claude/c--Users-User-OneDrive-Documentos-tarea-de-mi-novia-blog/8190e836-3128-46cf-bf2e-7ba33d463c7d/scratchpad/review-design/s/frames.png file:///C:/Users/User/AppData/Local/Temp/claude/c--Users-User-OneDrive-Documentos-tarea-de-mi-novia-blog/8190e836-3128-46cf-bf2e-7ba33d463c7d/scratchpad/review-design/frames.html)",
+      "Bash(ls -la C:/Users/User/AppData/Local/Temp/claude/c--Users-User-OneDrive-Documentos-tarea-de-mi-novia-blog/8190e836-3128-46cf-bf2e-7ba33d463c7d/scratchpad/review-design/s/frames.png)",
+      "Bash(rm -f s/l360_* s/d360_*)",
+      "Bash(curl -s -o /dev/null -w \"sin barra: %{http_code} -> %{redirect_url}\\\\n\" https://juanramirez2005.github.io/proyecto_blog_vic)",
+      "Bash(curl -s -o /dev/null -w \"raiz infografia: %{http_code}\\\\n\" https://juanramirez2005.github.io/infografia.html)",
+      "Bash(curl -s https://juanramirez2005.github.io/proyecto_blog_vic/)",
+      "Bash(curl -sI https://juanramirez2005.github.io/proyecto_blog_vic/infografia.html)",
+      "Read(//c/Users/User/AppData/Local/Temp/claude/c--Users-User-OneDrive-Documentos-tarea-de-mi-novia-blog/8190e836-3128-46cf-bf2e-7ba33d463c7d/scratchpad/doc/**)",
+      "Read(//c/Users/User/AppData/Local/Temp/claude/c--Users-User-OneDrive-Documentos-tarea-de-mi-novia-blog/8190e836-3128-46cf-bf2e-7ba33d463c7d/scratchpad//**)"
     ]
   }
 }
